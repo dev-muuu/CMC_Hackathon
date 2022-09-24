@@ -22,7 +22,17 @@
 		57E75E6C28DEE3A100AC24B2 /* SSOOYA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E6B28DEE3A100AC24B2 /* SSOOYA.storyboard */; };
 		57E75E6E28DEE3B800AC24B2 /* SAMSIKKI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E6D28DEE3B800AC24B2 /* SAMSIKKI.storyboard */; };
 		57E75E7028DEE3C900AC24B2 /* JUN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E6F28DEE3C900AC24B2 /* JUN.storyboard */; };
-		57E75E7228DEE3D600AC24B2 /* RIA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E7128DEE3D600AC24B2 /* RIA.storyboard */; };
+		57E75E7228DEE3D600AC24B2 /* CommunityMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E7128DEE3D600AC24B2 /* CommunityMain.storyboard */; };
+		8ADF373928DEF42100EA6C14 /* GroupZ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF373828DEF42100EA6C14 /* GroupZ.storyboard */; };
+		8ADF373B28DEF45B00EA6C14 /* GroupX.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF373A28DEF45B00EA6C14 /* GroupX.storyboard */; };
+		8ADF373D28DEF49F00EA6C14 /* GroupZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF373C28DEF49F00EA6C14 /* GroupZViewController.swift */; };
+		8ADF373F28DEF4B800EA6C14 /* GroupXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF373E28DEF4B800EA6C14 /* GroupXViewController.swift */; };
+		8ADF374128DEF50E00EA6C14 /* Ask.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF374028DEF50E00EA6C14 /* Ask.storyboard */; };
+		8ADF374528DEF55C00EA6C14 /* ToZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF374428DEF55C00EA6C14 /* ToZViewController.swift */; };
+		8ADF374728DEF56600EA6C14 /* ToXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF374628DEF56600EA6C14 /* ToXViewController.swift */; };
+		8ADF374928DEF6AE00EA6C14 /* ZWritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF374828DEF6AE00EA6C14 /* ZWritePostViewController.swift */; };
+		8ADF374B28DEF6EC00EA6C14 /* XWritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF374A28DEF6EC00EA6C14 /* XWritePostViewController.swift */; };
+		8ADF374D28DEF74A00EA6C14 /* CommunityMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADF374C28DEF74A00EA6C14 /* CommunityMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,10 +72,20 @@
 		57E75E6B28DEE3A100AC24B2 /* SSOOYA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SSOOYA.storyboard; sourceTree = "<group>"; };
 		57E75E6D28DEE3B800AC24B2 /* SAMSIKKI.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SAMSIKKI.storyboard; sourceTree = "<group>"; };
 		57E75E6F28DEE3C900AC24B2 /* JUN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JUN.storyboard; sourceTree = "<group>"; };
-		57E75E7128DEE3D600AC24B2 /* RIA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RIA.storyboard; sourceTree = "<group>"; };
+		57E75E7128DEE3D600AC24B2 /* CommunityMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CommunityMain.storyboard; sourceTree = "<group>"; };
 		5B58B63550D28EF472FBB196 /* Pods-Hackathon-HackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		8ADF373828DEF42100EA6C14 /* GroupZ.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupZ.storyboard; sourceTree = "<group>"; };
+		8ADF373A28DEF45B00EA6C14 /* GroupX.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupX.storyboard; sourceTree = "<group>"; };
+		8ADF373C28DEF49F00EA6C14 /* GroupZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupZViewController.swift; sourceTree = "<group>"; };
+		8ADF373E28DEF4B800EA6C14 /* GroupXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupXViewController.swift; sourceTree = "<group>"; };
+		8ADF374028DEF50E00EA6C14 /* Ask.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ask.storyboard; sourceTree = "<group>"; };
+		8ADF374428DEF55C00EA6C14 /* ToZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToZViewController.swift; sourceTree = "<group>"; };
+		8ADF374628DEF56600EA6C14 /* ToXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToXViewController.swift; sourceTree = "<group>"; };
+		8ADF374828DEF6AE00EA6C14 /* ZWritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWritePostViewController.swift; sourceTree = "<group>"; };
+		8ADF374A28DEF6EC00EA6C14 /* XWritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWritePostViewController.swift; sourceTree = "<group>"; };
+		8ADF374C28DEF74A00EA6C14 /* CommunityMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainViewController.swift; sourceTree = "<group>"; };
 		A931D615A03708FF4138BBE1 /* Pods-HackathonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonTests.debug.xcconfig"; path = "Target Support Files/Pods-HackathonTests/Pods-HackathonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A7E4A0D5827ED5D80DD091 /* Pods-Hackathon-HackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4CD9783947AE581F25A37BB /* Pods-HackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonTests.release.xcconfig"; path = "Target Support Files/Pods-HackathonTests/Pods-HackathonTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -144,7 +164,7 @@
 				57E75E3D28DEE1F100AC24B2 /* ViewController.swift */,
 				57E75E3F28DEE1F100AC24B2 /* Main.storyboard */,
 				57E75E6D28DEE3B800AC24B2 /* SAMSIKKI.storyboard */,
-				57E75E7128DEE3D600AC24B2 /* RIA.storyboard */,
+				8ADF373728DEF31500EA6C14 /* Community */,
 				57E75E6F28DEE3C900AC24B2 /* JUN.storyboard */,
 				57E75E6B28DEE3A100AC24B2 /* SSOOYA.storyboard */,
 				57E75E4228DEE20000AC24B2 /* Assets.xcassets */,
@@ -183,6 +203,56 @@
 			children = (
 			);
 			path = domain;
+			sourceTree = "<group>";
+		};
+		8ADF373728DEF31500EA6C14 /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF374E28DEF75900EA6C14 /* CommunityMain */,
+				8ADF374F28DEF77C00EA6C14 /* GroupZ */,
+				8ADF375028DEF78700EA6C14 /* GroupX */,
+				8ADF375128DEF79700EA6C14 /* Ask */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		8ADF374E28DEF75900EA6C14 /* CommunityMain */ = {
+			isa = PBXGroup;
+			children = (
+				57E75E7128DEE3D600AC24B2 /* CommunityMain.storyboard */,
+				8ADF374C28DEF74A00EA6C14 /* CommunityMainViewController.swift */,
+			);
+			path = CommunityMain;
+			sourceTree = "<group>";
+		};
+		8ADF374F28DEF77C00EA6C14 /* GroupZ */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF373828DEF42100EA6C14 /* GroupZ.storyboard */,
+				8ADF373C28DEF49F00EA6C14 /* GroupZViewController.swift */,
+				8ADF374828DEF6AE00EA6C14 /* ZWritePostViewController.swift */,
+			);
+			path = GroupZ;
+			sourceTree = "<group>";
+		};
+		8ADF375028DEF78700EA6C14 /* GroupX */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF373A28DEF45B00EA6C14 /* GroupX.storyboard */,
+				8ADF373E28DEF4B800EA6C14 /* GroupXViewController.swift */,
+				8ADF374A28DEF6EC00EA6C14 /* XWritePostViewController.swift */,
+			);
+			path = GroupX;
+			sourceTree = "<group>";
+		};
+		8ADF375128DEF79700EA6C14 /* Ask */ = {
+			isa = PBXGroup;
+			children = (
+				8ADF374028DEF50E00EA6C14 /* Ask.storyboard */,
+				8ADF374628DEF56600EA6C14 /* ToXViewController.swift */,
+				8ADF374428DEF55C00EA6C14 /* ToZViewController.swift */,
+			);
+			path = Ask;
 			sourceTree = "<group>";
 		};
 		A92A67C23779793F5991AEAD /* Frameworks */ = {
@@ -304,13 +374,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ADF374128DEF50E00EA6C14 /* Ask.storyboard in Resources */,
 				57E75E4628DEE20000AC24B2 /* LaunchScreen.storyboard in Resources */,
+				8ADF373928DEF42100EA6C14 /* GroupZ.storyboard in Resources */,
 				57E75E6E28DEE3B800AC24B2 /* SAMSIKKI.storyboard in Resources */,
 				57E75E7028DEE3C900AC24B2 /* JUN.storyboard in Resources */,
+				8ADF373B28DEF45B00EA6C14 /* GroupX.storyboard in Resources */,
 				57E75E4328DEE20000AC24B2 /* Assets.xcassets in Resources */,
 				57E75E6C28DEE3A100AC24B2 /* SSOOYA.storyboard in Resources */,
 				57E75E4128DEE1F100AC24B2 /* Main.storyboard in Resources */,
-				57E75E7228DEE3D600AC24B2 /* RIA.storyboard in Resources */,
+				57E75E7228DEE3D600AC24B2 /* CommunityMain.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,8 +512,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
+				8ADF374B28DEF6EC00EA6C14 /* XWritePostViewController.swift in Sources */,
+				8ADF374528DEF55C00EA6C14 /* ToZViewController.swift in Sources */,
+				8ADF374D28DEF74A00EA6C14 /* CommunityMainViewController.swift in Sources */,
 				57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */,
+				8ADF374928DEF6AE00EA6C14 /* ZWritePostViewController.swift in Sources */,
 				57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */,
+				8ADF374728DEF56600EA6C14 /* ToXViewController.swift in Sources */,
+				8ADF373F28DEF4B800EA6C14 /* GroupXViewController.swift in Sources */,
+				8ADF373D28DEF49F00EA6C14 /* GroupZViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -628,6 +708,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,6 +738,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
