@@ -11,18 +11,13 @@ class VoteViewController: UIViewController {
     
     let mainView = VoteView()
     
-    var chatData: [Int] = [1,2,3,4,5] //default = []
+    var chatData: [String] = ["1","2","3","4","5"] //default = []
     
-    var didVote = false{
+    var currentTitle: IndexPath = [0,0]{
         didSet{
-            
-            guard let cell = mainView.contentCollectionView.cellForItem(at: currentTitle) as? VoteCollectionViewCell else { fatalError()
-            }
-            cell.tableView.reloadData()
+            mainView.tableView.reloadData()
         }
     }
-    
-    var currentTitle: IndexPath = [0,0]
 
     override func viewDidLoad() {
         
@@ -34,8 +29,11 @@ class VoteViewController: UIViewController {
         mainView.titleCollectionView.delegate = self
         mainView.titleCollectionView.allowsMultipleSelection = false
         
-        mainView.contentCollectionView.delegate = self
-        mainView.contentCollectionView.dataSource = self
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
+        mainView.tableView.separatorStyle = .none
+        
+        mainView.chatTextfield.delegate = self
         
         mainView.snp.makeConstraints{
             //TODO: - top offset 17로 변경
@@ -46,6 +44,16 @@ class VoteViewController: UIViewController {
 
 }
 
+extension VoteViewController: UITextFieldDelegate{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
+        print(textField.text)
+        textField.text = nil
+        return true
+    }
+    
+}
+
 extension VoteViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,37 +61,23 @@ extension VoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if(collectionView == mainView.titleCollectionView){
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteTitleCollectionViewCell.cellIdentifier, for: indexPath) as? VoteTitleCollectionViewCell else { fatalError() }
-            if(currentTitle == indexPath){
-                collectionView.selectItem(at: currentTitle, animated: false, scrollPosition: .left)
-            }else{
-                cell.isSelected = false
-            }
-            cell.titleLabel.text = indexPath.row == 0 ? "노란싹수배틀" : "라떼 배틀"
-            return cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteTitleCollectionViewCell.cellIdentifier, for: indexPath) as? VoteTitleCollectionViewCell else { fatalError() }
+        if(currentTitle == indexPath){
+            collectionView.selectItem(at: currentTitle, animated: false, scrollPosition: .left)
         }else{
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteCollectionViewCell.cellIdentifier, for: indexPath) as? VoteCollectionViewCell else { fatalError() }
-            cell.tableView.dataSource = self
-            cell.tableView.delegate = self
-            return cell
+            cell.isSelected = false
         }
+        cell.titleLabel.text = indexPath.row == 0 ? "노란싹수배틀" : "라떼 배틀"
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if(collectionView == mainView.titleCollectionView){
-            return CGSize(width: (Const.DEVICE_WIDTH - 20) / 2, height: 65)
-            
-        }else{
-            return CGSize(width: Const.DEVICE_WIDTH, height: Const.DEVICE_HEIGTH - (112 + 30))
-        }
+        return CGSize(width: (Const.DEVICE_WIDTH - 20) / 2, height: 65)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("cell select?")
         self.currentTitle = collectionView.indexPathsForSelectedItems![0]
-        print(collectionView.indexPathsForSelectedItems)
         
         if collectionView == mainView.titleCollectionView {
             
@@ -97,7 +91,6 @@ extension VoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
                 $0.width.equalTo(size)
             }
             
-            
             UIView.animate(withDuration: 0.3) {
                 self.view.layoutIfNeeded()
             }
@@ -110,23 +103,21 @@ extension VoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return chatData.count + 2
+        return chatData.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.row{
-        case 0:
+        
+        if(indexPath.row == 0){
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FightTableViewCell.cellIdentifier, for: indexPath) as? FightTableViewCell else { fatalError() }
             cell.superViewController = self
-            didVote ? cell.willShowPercentageView() : cell.willShowVersusView()
-            return cell
+            cell.titleLabel.text = currentTitle == [0,0] ? "누가 더 싹수가 노란가" : "누가 더 라떼인가"
+            cell.type = currentTitle == [0,0] ? Zgeneration() : Xgeneration()
             
-        case 1:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTitleViewCell.cellIdentifier, for: indexPath) as? ChatTitleViewCell else { fatalError() }
-            cell.chatCount = self.chatData.count
+            cell.didVote ? cell.willShowPercentageView() : cell.willShowVersusView()
             return cell
-        default:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.cellIdentifier, for: indexPath) as? ChatTableViewCell else { fatalError() }
+        }else{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.cellIdentifier, for: indexPath) as? CommentTableViewCell else { fatalError() }
             return cell
         }
     }
