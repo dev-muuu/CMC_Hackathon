@@ -7,7 +7,7 @@
 
 import UIKit
 
-//class VoteXtabView: UIView {
-//
-//
-//}
+class VoteCollectionViewCell: UICollectionViewCell {
+
+
+}
