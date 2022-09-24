@@ -8,22 +8,57 @@
 import UIKit
 
 class VoteViewController: UIViewController {
+    
+    let mainView = VoteView()
+    
+    var chatData: [Int] = [1,2,3,4,5] //default = []
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.addSubview(mainView)
+        
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
+        mainView.tableView.separatorStyle = .none
+        
+        mainView.snp.makeConstraints{
+            //TODO: - top offset 17로 변경
+            $0.top.equalToSuperview().offset(50)
+            $0.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        for family in UIFont.familyNames {
+            print("\(family)");
+                        
+            for names in UIFont.fontNames(forFamilyName: family) {
+                print("== \(names)");
+            }
+        }
+    }
+
+}
+
+extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return chatData.count + 2
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row{
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FightTableViewCell.cellIdentifier, for: indexPath) as? FightTableViewCell else { fatalError() }
+            return cell
+            
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTitleViewCell.cellIdentifier, for: indexPath) as? ChatTitleViewCell else { fatalError() }
+            cell.chatCount = self.chatData.count
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTableViewCell.cellIdentifier, for: indexPath) as? ChatTableViewCell else { fatalError() }
+            return cell
+        }
     }
-    */
-
 }

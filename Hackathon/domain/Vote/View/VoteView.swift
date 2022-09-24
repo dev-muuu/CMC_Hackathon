@@ -7,23 +7,28 @@
 
 import UIKit
 
-class VoteView: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+class VoteView: UIView {
+    
+    let tableView = UITableView().then{
+        $0.showsVerticalScrollIndicator = false
+        
+        $0.register(FightTableViewCell.self, forCellReuseIdentifier: FightTableViewCell.cellIdentifier)
+        $0.register(ChatTitleViewCell.self, forCellReuseIdentifier: ChatTitleViewCell.cellIdentifier)
+        $0.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.cellIdentifier)
+    }
 
-        // Do any additional setup after loading the view.
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        self.addSubview(tableView)
+        
+        tableView.snp.makeConstraints{
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-    */
-
 }

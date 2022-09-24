@@ -7,13 +7,7 @@
 
 import UIKit
 
-class VoteZtabView: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+class VoteZtabView: UITableViewCell {
     
 
     /*
