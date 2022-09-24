@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import KakaoSDKCommon
+import KakaoSDKAuth
+import KakaoSDKUser
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let NATIVE_APP_KEY = Bundle.main.infoDictionary?["KAKAO_NAVIVE_APP_KEY"] ?? ""
+        
+        KakaoSDK.initSDK(appKey: NATIVE_APP_KEY as! String)
         return true
     }
 

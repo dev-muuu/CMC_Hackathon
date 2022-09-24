@@ -13,6 +13,8 @@
 		27BAFE9FB499C0BD5C6AA1F0 /* Pods_Hackathon_HackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B8449772D510CD207CA8CC /* Pods_Hackathon_HackathonUITests.framework */; };
 		2EAF3F3307F76D2CA1DAE0B7 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA391256D5FB42BA67913D4 /* Pods_Hackathon.framework */; };
 		3D38F6D49D3CE1B86E85A204 /* Pods_HackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1401094316DA740DB46498CD /* Pods_HackathonTests.framework */; };
+		473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A917628DF2F0D0050D389 /* kakaoLoginPage.swift */; };
+		473A917928DF2F260050D389 /* loginDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473A917828DF2F260050D389 /* loginDetail.swift */; };
 		57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E3928DEE1F100AC24B2 /* AppDelegate.swift */; };
 		57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E3B28DEE1F100AC24B2 /* SceneDelegate.swift */; };
 		57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E3D28DEE1F100AC24B2 /* ViewController.swift */; };
@@ -60,6 +62,9 @@
 		0765138E28DF2BF300BCB0BD /* detailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPostViewController.swift; sourceTree = "<group>"; };
 		0CA391256D5FB42BA67913D4 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1401094316DA740DB46498CD /* Pods_HackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		473A917628DF2F0D0050D389 /* kakaoLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoLoginPage.swift; sourceTree = "<group>"; };
+		473A917828DF2F260050D389 /* loginDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginDetail.swift; sourceTree = "<group>"; };
+		473A917A28DF31C10050D389 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		55B8449772D510CD207CA8CC /* Pods_Hackathon_HackathonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon_HackathonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E75E3628DEE1F100AC24B2 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E75E3928DEE1F100AC24B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +159,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		473A917328DF2E8F0050D389 /* login */ = {
+			isa = PBXGroup;
+			children = (
+				473A917628DF2F0D0050D389 /* kakaoLoginPage.swift */,
+				473A917828DF2F260050D389 /* loginDetail.swift */,
+			);
+			path = login;
+			sourceTree = "<group>";
+		};
 		57E75E2D28DEE1F100AC24B2 = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +206,7 @@
 				57E75E4228DEE20000AC24B2 /* Assets.xcassets */,
 				57E75E4428DEE20000AC24B2 /* LaunchScreen.storyboard */,
 				57E75E4728DEE20000AC24B2 /* Info.plist */,
+				473A917A28DF31C10050D389 /* Config.xcconfig */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -223,6 +238,7 @@
 		57E75E6A28DEE38B00AC24B2 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				473A917328DF2E8F0050D389 /* login */,
 				0765138828DF2BC200BCB0BD /* detailPost */,
 				8ADF375228DEFC6000EA6C14 /* Community */,
 				57E75E7328DEF19600AC24B2 /* Vote */,
@@ -523,10 +539,12 @@
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
 				57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */,
 				57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */,
+				473A917928DF2F260050D389 /* loginDetail.swift in Sources */,
 				57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */,
 				57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */,
 				0765138B28DF2BD900BCB0BD /* detailPostTableViewCell.swift in Sources */,
 				57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */,
+				473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */,
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,
 				57E75E7F28DEF22000AC24B2 /* VoteZtabView.swift in Sources */,
 			);
@@ -586,6 +604,7 @@
 /* Begin XCBuildConfiguration section */
 		57E75E5E28DEE20100AC24B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 473A917A28DF31C10050D389 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -635,7 +654,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -647,6 +666,7 @@
 		};
 		57E75E5F28DEE20100AC24B2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 473A917A28DF31C10050D389 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -690,7 +710,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
