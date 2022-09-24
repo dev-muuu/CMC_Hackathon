@@ -15,9 +15,14 @@ class VoteViewController: UIViewController {
     
     var didVote = false{
         didSet{
-            mainView.tableView.reloadData()
+            
+            guard let cell = mainView.contentCollectionView.cellForItem(at: currentTitle) as? VoteCollectionViewCell else { fatalError()
+            }
+            cell.tableView.reloadData()
         }
     }
+    
+    var currentTitle: IndexPath = [0,0]
 
     override func viewDidLoad() {
         
@@ -25,9 +30,12 @@ class VoteViewController: UIViewController {
 
         self.view.addSubview(mainView)
         
-        mainView.tableView.delegate = self
-        mainView.tableView.dataSource = self
-        mainView.tableView.separatorStyle = .none
+        mainView.titleCollectionView.dataSource = self
+        mainView.titleCollectionView.delegate = self
+        mainView.titleCollectionView.allowsMultipleSelection = false
+        
+        mainView.contentCollectionView.delegate = self
+        mainView.contentCollectionView.dataSource = self
         
         mainView.snp.makeConstraints{
             //TODO: - top offset 17로 변경
@@ -36,6 +44,67 @@ class VoteViewController: UIViewController {
         }
     }
 
+}
+
+extension VoteViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if(collectionView == mainView.titleCollectionView){
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteTitleCollectionViewCell.cellIdentifier, for: indexPath) as? VoteTitleCollectionViewCell else { fatalError() }
+            if(currentTitle == indexPath){
+                collectionView.selectItem(at: currentTitle, animated: false, scrollPosition: .left)
+            }else{
+                cell.isSelected = false
+            }
+            cell.titleLabel.text = indexPath.row == 0 ? "노란싹수배틀" : "라떼 배틀"
+            return cell
+        }else{
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: VoteCollectionViewCell.cellIdentifier, for: indexPath) as? VoteCollectionViewCell else { fatalError() }
+            cell.tableView.dataSource = self
+            cell.tableView.delegate = self
+            return cell
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if(collectionView == mainView.titleCollectionView){
+            return CGSize(width: (Const.DEVICE_WIDTH - 20) / 2, height: 65)
+            
+        }else{
+            return CGSize(width: Const.DEVICE_WIDTH, height: Const.DEVICE_HEIGTH - (112 + 30))
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("cell select?")
+        self.currentTitle = collectionView.indexPathsForSelectedItems![0]
+        print(collectionView.indexPathsForSelectedItems)
+        
+        if collectionView == mainView.titleCollectionView {
+            
+            guard let cell = collectionView.cellForItem(at: indexPath) as? VoteTitleCollectionViewCell else { fatalError() }
+            
+            mainView.tabLineView.snp.remakeConstraints{
+                $0.leading.equalTo(cell.snp.leading)
+                $0.height.equalTo(3)
+                $0.top.equalTo(collectionView.snp.bottom)
+                let size = (Const.DEVICE_WIDTH - 66) / 2
+                $0.width.equalTo(size)
+            }
+            
+            
+            UIView.animate(withDuration: 0.3) {
+                self.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    
 }
 
 extension VoteViewController: UITableViewDelegate, UITableViewDataSource{

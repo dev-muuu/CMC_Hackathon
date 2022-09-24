@@ -10,13 +10,27 @@ import UIKit
 
 class VoteView: UIView {
     
-    let tableView = UITableView().then{
-        $0.showsVerticalScrollIndicator = false
-        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+    let titleCollectionView = UICollectionView(frame: .zero, collectionViewLayout: .init()).then{
         
-        $0.register(FightTableViewCell.self, forCellReuseIdentifier: FightTableViewCell.cellIdentifier)
-        $0.register(ChatTitleViewCell.self, forCellReuseIdentifier: ChatTitleViewCell.cellIdentifier)
-        $0.register(ChatTableViewCell.self, forCellReuseIdentifier: ChatTableViewCell.cellIdentifier)
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumInteritemSpacing = 0
+        
+        $0.collectionViewLayout = flowLayout
+        
+        $0.register(VoteTitleCollectionViewCell.self, forCellWithReuseIdentifier: VoteTitleCollectionViewCell.cellIdentifier)
+    }
+    
+    let tabLineView = UIView().then{
+        $0.backgroundColor = .black
+    }
+    
+    let contentCollectionView = UICollectionView(frame: .zero, collectionViewLayout: .init()).then{
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        
+        $0.collectionViewLayout = flowLayout
+        
+        $0.register(VoteCollectionViewCell.self, forCellWithReuseIdentifier: VoteCollectionViewCell.cellIdentifier)
     }
     
     let chatView = UIView().then{
@@ -34,12 +48,30 @@ class VoteView: UIView {
         
         super.init(frame: frame)
         
-        self.addSubview(tableView)
+        self.addSubview(titleCollectionView)
+        self.addSubview(tabLineView)
+        self.addSubview(contentCollectionView)
+        
         self.addSubview(chatView)
         chatView.addSubview(chatTextfield)
         
-        tableView.snp.makeConstraints{
-            $0.top.bottom.leading.trailing.equalToSuperview()
+        titleCollectionView.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(22)
+            $0.leading.equalToSuperview().offset(10)
+            $0.trailing.equalToSuperview().offset(-10)
+            $0.height.equalTo(65)
+        }
+        
+        tabLineView.snp.makeConstraints{
+            $0.height.equalTo(3)
+            $0.top.equalTo(titleCollectionView.snp.bottom)
+            let size = (Const.DEVICE_WIDTH - 66) / 2
+            $0.width.equalTo(size)
+        }
+        
+        contentCollectionView.snp.makeConstraints{
+            $0.bottom.leading.trailing.equalToSuperview()
+            $0.top.equalTo(tabLineView.snp.bottom)
         }
         
         chatView.snp.makeConstraints{

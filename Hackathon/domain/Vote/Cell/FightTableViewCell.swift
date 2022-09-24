@@ -154,7 +154,9 @@ class FightTableViewCell: UITableViewCell{
     }
     
     @objc func choiceBtnDidClicked(){
+        print("click?")
         superViewController!.didVote = true
+        print(superViewController.didVote)
     }
 }
 
