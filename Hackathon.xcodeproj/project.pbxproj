@@ -33,8 +33,6 @@
 		57E75E7028DEE3C900AC24B2 /* JUN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E6F28DEE3C900AC24B2 /* JUN.storyboard */; };
 		57E75E7228DEE3D600AC24B2 /* RIA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E7128DEE3D600AC24B2 /* RIA.storyboard */; };
 		57E75E7528DEF1CD00AC24B2 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7428DEF1CD00AC24B2 /* VoteViewController.swift */; };
-		57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7628DEF1E100AC24B2 /* VoteZtabViewController.swift */; };
-		57E75E7928DEF1EC00AC24B2 /* VoteXtabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7828DEF1EC00AC24B2 /* VoteXtabViewController.swift */; };
 		57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7C28DEF21400AC24B2 /* VoteView.swift */; };
 		57E75E7F28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7E28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift */; };
 		57E75E8128DEF22B00AC24B2 /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8028DEF22B00AC24B2 /* VoteCollectionViewCell.swift */; };
@@ -42,6 +40,12 @@
 		57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8E28DF3C1100AC24B2 /* UIFont.swift */; };
 		57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */; };
 		57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */; };
+		57E75E9F28DFA8A400AC24B2 /* VoteDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9E28DFA8A400AC24B2 /* VoteDataManager.swift */; };
+		57E75EA128DFA8B100AC24B2 /* VoteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA028DFA8B100AC24B2 /* VoteInput.swift */; };
+		57E75EA328DFA8BA00AC24B2 /* VoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA228DFA8BA00AC24B2 /* VoteModel.swift */; };
+		57E75EA628DFA8D700AC24B2 /* CommentDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA528DFA8D700AC24B2 /* CommentDataManager.swift */; };
+		57E75EA828DFA8E000AC24B2 /* CommentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA728DFA8E000AC24B2 /* CommentInput.swift */; };
+		57E75EAA28DFA8E800AC24B2 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA928DFA8E800AC24B2 /* CommentModel.swift */; };
 		8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16E77928DF6BBB0011FD66 /* CommunityMainViewController.swift */; };
 		8AD1BAC328DF64FE00260E5E /* ToXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC228DF64FE00260E5E /* ToXViewController.swift */; };
 		8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC428DF651E00260E5E /* ToZViewController.swift */; };
@@ -101,8 +105,6 @@
 		57E75E6F28DEE3C900AC24B2 /* JUN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JUN.storyboard; sourceTree = "<group>"; };
 		57E75E7128DEE3D600AC24B2 /* RIA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RIA.storyboard; sourceTree = "<group>"; };
 		57E75E7428DEF1CD00AC24B2 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
-		57E75E7628DEF1E100AC24B2 /* VoteZtabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteZtabViewController.swift; sourceTree = "<group>"; };
-		57E75E7828DEF1EC00AC24B2 /* VoteXtabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteXtabViewController.swift; sourceTree = "<group>"; };
 		57E75E7C28DEF21400AC24B2 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
 		57E75E7E28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		57E75E8028DEF22B00AC24B2 /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -110,6 +112,12 @@
 		57E75E8E28DF3C1100AC24B2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTableViewCell.swift; sourceTree = "<group>"; };
 		57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleViewCell.swift; sourceTree = "<group>"; };
+		57E75E9E28DFA8A400AC24B2 /* VoteDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteDataManager.swift; sourceTree = "<group>"; };
+		57E75EA028DFA8B100AC24B2 /* VoteInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteInput.swift; sourceTree = "<group>"; };
+		57E75EA228DFA8BA00AC24B2 /* VoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteModel.swift; sourceTree = "<group>"; };
+		57E75EA528DFA8D700AC24B2 /* CommentDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentDataManager.swift; sourceTree = "<group>"; };
+		57E75EA728DFA8E000AC24B2 /* CommentInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInput.swift; sourceTree = "<group>"; };
+		57E75EA928DFA8E800AC24B2 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
 		5B58B63550D28EF472FBB196 /* Pods-Hackathon-HackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -279,6 +287,7 @@
 				0765138828DF2BC200BCB0BD /* detailPost */,
 				8AD1BAC128DF64CC00260E5E /* Community */,
 				57E75E7328DEF19600AC24B2 /* Vote */,
+				57E75E9C28DFA75900AC24B2 /* Service */,
 			);
 			path = domain;
 			sourceTree = "<group>";
@@ -289,8 +298,6 @@
 				57E75E7B28DEF20400AC24B2 /* Cell */,
 				57E75E7A28DEF1FD00AC24B2 /* View */,
 				57E75E7428DEF1CD00AC24B2 /* VoteViewController.swift */,
-				57E75E7628DEF1E100AC24B2 /* VoteZtabViewController.swift */,
-				57E75E7828DEF1EC00AC24B2 /* VoteXtabViewController.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -323,6 +330,35 @@
 				57E75E8E28DF3C1100AC24B2 /* UIFont.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		57E75E9C28DFA75900AC24B2 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				57E75EA428DFA8C800AC24B2 /* Comment */,
+				57E75E9D28DFA77C00AC24B2 /* Vote */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		57E75E9D28DFA77C00AC24B2 /* Vote */ = {
+			isa = PBXGroup;
+			children = (
+				57E75E9E28DFA8A400AC24B2 /* VoteDataManager.swift */,
+				57E75EA028DFA8B100AC24B2 /* VoteInput.swift */,
+				57E75EA228DFA8BA00AC24B2 /* VoteModel.swift */,
+			);
+			path = Vote;
+			sourceTree = "<group>";
+		};
+		57E75EA428DFA8C800AC24B2 /* Comment */ = {
+			isa = PBXGroup;
+			children = (
+				57E75EA528DFA8D700AC24B2 /* CommentDataManager.swift */,
+				57E75EA728DFA8E000AC24B2 /* CommentInput.swift */,
+				57E75EA928DFA8E800AC24B2 /* CommentModel.swift */,
+			);
+			path = Comment;
 			sourceTree = "<group>";
 		};
 		8AD1BAC028DF64AC00260E5E /* CommunityMain */ = {
@@ -650,9 +686,9 @@
 				0765138D28DF2BE700BCB0BD /* CommentTableViewCell.swift in Sources */,
 				8AD1BAD528DF662C00260E5E /* GroupZViewController.swift in Sources */,
 				0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */,
-				57E75E7928DEF1EC00AC24B2 /* VoteXtabViewController.swift in Sources */,
 				8AD1BAC328DF64FE00260E5E /* ToXViewController.swift in Sources */,
 				57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */,
+				57E75EA828DFA8E000AC24B2 /* CommentInput.swift in Sources */,
 				57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */,
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
 				8AD1BACA28DF658B00260E5E /* ZAskViewController.swift in Sources */,
@@ -661,17 +697,21 @@
 				8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */,
 				8AD1BAD128DF660F00260E5E /* GroupXViewController.swift in Sources */,
 				473A917928DF2F260050D389 /* loginDetail.swift in Sources */,
+				57E75EA628DFA8D700AC24B2 /* CommentDataManager.swift in Sources */,
 				8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */,
-				57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */,
 				074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */,
+				57E75EA128DFA8B100AC24B2 /* VoteInput.swift in Sources */,
 				074FFC7B28DF4DC10050D332 /* UserTableViewCell.swift in Sources */,
 				57E75E8128DEF22B00AC24B2 /* VoteCollectionViewCell.swift in Sources */,
 				0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */,
 				8AD1BAD328DF661E00260E5E /* XWritePostViewController.swift in Sources */,
 				57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */,
+				57E75EA328DFA8BA00AC24B2 /* VoteModel.swift in Sources */,
 				473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */,
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,
 				57E75E7F28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift in Sources */,
+				57E75E9F28DFA8A400AC24B2 /* VoteDataManager.swift in Sources */,
+				57E75EAA28DFA8E800AC24B2 /* CommentModel.swift in Sources */,
 				8AD1BAD728DF663900260E5E /* ZWritePostViewController.swift in Sources */,
 				8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */,
 			);
