@@ -10,6 +10,9 @@ import UIKit
 class CommunityMainViewController: UIViewController {
     
 
+    @IBOutlet weak var HomeBtn: UITabBarItem!
+    @IBOutlet weak var CommunityBtn: UITabBarItem!
+    @IBOutlet weak var ProfileBtn: UITabBarItem!
     @IBOutlet weak var GoToGroupZBtn: UIButton!
     @IBOutlet weak var GoToGroupXBtn: UIButton!
     
