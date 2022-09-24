@@ -14,6 +14,8 @@ final class commentTableViewCell: UITableViewCell {
     
     // MARK: - Property
     
+    static let cellIdentifier = "commentTableViewCell"
+    
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .black
