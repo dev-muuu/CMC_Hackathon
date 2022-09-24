@@ -11,7 +11,8 @@ import SnapKit
 
 
 extension UIColor{
-    static let projectBrown = UIColor(red: 220/255, green: 203/255, blue: 172/255, alpha: 1)
+    static let lightBrown = UIColor(red: 241/255, green: 233/255, blue: 217/255, alpha: 1)
+    static let deepBrown = UIColor(red: 220/255, green: 203/255, blue: 172/255, alpha: 1)
 }
 
 class FightTableViewCell: UITableViewCell{
@@ -26,32 +27,36 @@ class FightTableViewCell: UITableViewCell{
         $0.backgroundColor = .white
     }
     
-    lazy var crownBtn = UIButton().then{
-        $0.titleLabel?.font = UIFont.notosans(size: 15, family: .Bold)
-        $0.setTitleColor(UIColor(red: 106/255, green: 106/255, blue: 106/255, alpha: 1), for: .normal)
-        $0.setTitle("🏆 명예 히스토리", for: .normal)
-    }
-    
     let titleLabel = UILabel().then{
         $0.text = "누가 더 라떼인가"
         $0.font = UIFont.notosans(size: 28, family: .Bold)
     }
     
     lazy var topChoiceBtn = UIButton().then{
-        $0.backgroundColor = .projectBrown
+        $0.backgroundColor = .lightBrown
         $0.layer.cornerRadius = 16
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.numberOfLines = 0
         $0.titleLabel?.font = UIFont.notosans(size: 20, family: .Bold)
         $0.titleLabel?.textAlignment = .center
+        $0.setTitle("편의점 알바생에게 반말하는 우리 엄마", for: .normal)
+        $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     lazy var bottomChoiceBtn = UIButton().then{
-        $0.backgroundColor = .projectBrown
-        $0.backgroundColor = .yellow
+        $0.backgroundColor = .deepBrown
         $0.layer.cornerRadius = 16
+        $0.setTitleColor(.black, for: .normal)
+        $0.titleLabel?.numberOfLines = 0
+        $0.titleLabel?.font = UIFont.notosans(size: 20, family: .Bold)
+        $0.titleLabel?.textAlignment = .center
+        $0.setTitle("편의점 알바생에게 반말하는 우리 엄마", for: .normal)
+        $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
     }
     
     let versusLabel = UILabel().then{
         $0.text = "VS"
+        $0.textAlignment = .center
         $0.font = UIFont.notosans(size: 67, family: .Regular)
     }
     
@@ -72,12 +77,10 @@ class FightTableViewCell: UITableViewCell{
         
         self.contentView.addSubview(baseView)
         
-        baseView.addSubview(crownBtn)
         baseView.addSubview(titleLabel)
         baseView.addSubview(topChoiceBtn)
         baseView.addSubview(versusLabel)
         baseView.addSubview(bottomChoiceBtn)
-        
     }
     
     func setUpConstraint(){
@@ -86,22 +89,15 @@ class FightTableViewCell: UITableViewCell{
             $0.top.bottom.leading.trailing.equalToSuperview()
         }
         
-        crownBtn.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(33)
-            $0.trailing.equalToSuperview().offset(-12)
-            $0.width.equalTo(120)
-            $0.height.equalTo(26)
-        }
-        
         titleLabel.snp.makeConstraints{
-            $0.top.equalTo(crownBtn).offset(34)
+            $0.top.equalToSuperview().offset(51)
             $0.leading.equalToSuperview().offset(36)
         }
         
         topChoiceBtn.snp.makeConstraints{
             $0.top.equalTo(titleLabel.snp.bottom).offset(34)
-            $0.leading.equalToSuperview().offset(36)
-            $0.trailing.equalToSuperview().offset(-32)
+            $0.leading.equalToSuperview().offset(34)
+            $0.centerX.equalToSuperview()
             $0.height.equalTo(148)
         }
         
@@ -113,14 +109,11 @@ class FightTableViewCell: UITableViewCell{
         
         bottomChoiceBtn.snp.makeConstraints{
             $0.top.equalTo(versusLabel.snp.bottom).offset(17)
-            $0.leading.equalToSuperview().offset(36)
-            $0.trailing.equalToSuperview().offset(-32)
+            $0.leading.equalToSuperview().offset(34)
+            $0.centerX.equalToSuperview()
             $0.height.equalTo(148)
             $0.bottom.equalToSuperview()
         }
-        
-        
-        
         
     }
 }
