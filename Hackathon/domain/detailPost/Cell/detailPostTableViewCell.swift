@@ -6,3 +6,19 @@
 //
 
 import Foundation
+import SnapKit
+import UIKit
+import Then
+
+
+final class detailPostTableViewCell: UITableViewCell {
+    
+    final lazy var postView: UIView = {
+       let postView = UIView()
+        
+        return postView
+    }()
+    
+    
+}
+
