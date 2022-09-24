@@ -9,6 +9,9 @@ import UIKit
 
 class CommunityMainViewController: UIViewController {
 
+    @IBOutlet weak var UnionYellow1ImgView: UIImageView!
+    @IBOutlet weak var UnionBrown1ImgView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
