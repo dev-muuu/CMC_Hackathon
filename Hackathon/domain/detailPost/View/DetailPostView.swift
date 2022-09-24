@@ -13,8 +13,10 @@ class DetailPostView: UIView {
     let tableView = UITableView().then{
         $0.showsVerticalScrollIndicator = false
         
+        $0.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellIdentifier)
         $0.register(DetailPostTableViewCell.self, forCellReuseIdentifier: DetailPostTableViewCell.cellIdentifier)
         $0.register(CommentTableViewCell.self, forCellReuseIdentifier: CommentTableViewCell.cellIdentifier)
+
     }
 
     override init(frame: CGRect) {
