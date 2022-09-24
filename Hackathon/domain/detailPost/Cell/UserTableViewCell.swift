@@ -74,12 +74,12 @@ final class UserTableViewCell: UITableViewCell {
         userImage.snp.makeConstraints{
             $0.width.equalTo(47.71)
             $0.height.equalTo(45.58)
-            $0.top.equalToSuperview().offset(15)
+            $0.top.equalToSuperview().offset(50)
             $0.leading.equalToSuperview().offset(25)
         }
         
         nickname.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(25)
+            $0.top.equalTo(userImage).offset(10)
             $0.leading.equalTo(userImage.snp.trailing).offset(16.29)
         }
         

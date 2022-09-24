@@ -82,19 +82,21 @@ class DetailPostTableViewCell: UITableViewCell {
         }
         
         postView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(30)
+            $0.top.equalToSuperview().offset(60)
             $0.leading.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(300)
         }
         
         postTitle.snp.makeConstraints {
-            $0.top.equalTo(postView.snp.bottom).offset(10)
+            $0.top.equalTo(postView)
             $0.leading.equalTo(postView.snp.leading).offset(10)
         }
         
         postContents.snp.makeConstraints {
             $0.top.equalTo(postTitle.snp.bottom).offset(10)
             $0.leading.equalTo(postTitle)
+            $0.trailing.equalTo(postView)
         }
         
         
