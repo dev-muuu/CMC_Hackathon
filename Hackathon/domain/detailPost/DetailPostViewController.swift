@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class detailPostViewController: UIViewController {
+class DetailPostViewController: UIViewController {
 
     // MARK: - Init
     convenience init(bgColor: UIColor) {
@@ -26,7 +26,7 @@ class detailPostViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.dataSource = self
 
-        tableView.register(commentTableViewCell.self, forCellReuseIdentifier: "CommentTableViewCell")
+        tableView.register(CommentTableViewCell.self, forCellReuseIdentifier: "CommentTableViewCell")
 
         return tableView
     }()
@@ -41,12 +41,12 @@ class detailPostViewController: UIViewController {
 
 }
 
-extension detailPostViewController: UITableViewDataSource {
+extension DetailPostViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? commentTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentTableViewCell
 //
 //        if indexPath.row == 0 {
 //            cell?.backgroundColor = .orange
@@ -60,7 +60,7 @@ extension detailPostViewController: UITableViewDataSource {
 
 }
 
-private extension detailPostViewController {
+private extension DetailPostViewController {
     func setupTableView() {
         view.addSubview(tableview)
         tableview.snp.makeConstraints {

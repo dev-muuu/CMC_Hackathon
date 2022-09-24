@@ -11,13 +11,17 @@ import UIKit
 import Then
 
 
-final class detailPostTableViewCell: UITableViewCell {
+final class DetailPostTableViewCell: UITableViewCell {
+    
+    static let cellIdentifier = "DetailPostTableViewCell"
     
     final lazy var postView: UIView = {
        let postView = UIView()
         
         return postView
     }()
+    
+    
     
     
 }
