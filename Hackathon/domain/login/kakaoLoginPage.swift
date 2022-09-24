@@ -12,14 +12,16 @@ import KakaoSDKUser
 
 class KakaoLoginViewController: UIViewController {
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     
     
-    @IBAction func kakaoLoginButton(_ sender: Any) {
+    @IBAction func kakaoLoginButtonClicked(_ sender: Any) {
         
         // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
