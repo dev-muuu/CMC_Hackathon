@@ -9,29 +9,6 @@ import UIKit
 import Then
 import SnapKit
 
-extension UIFont{
-    
-    /* 프로젝트 내 적용 가능한 폰트 출력 코드
-    for family in UIFont.familyNames {
-        print("\(family)");
-                    
-        for names in UIFont.fontNames(forFamilyName: family) {
-            print("== \(names)");
-        }
-    }
-    */
-    
-    enum Family: String {
-        case Bold, Medium, Regular
-    }
-    
-    static func pretendard(size: CGFloat = 14, family: Family = .Medium) -> UIFont! {
-        guard let font: UIFont = UIFont(name: "Pretendard-\(family)", size: size) else{
-            return nil
-        }
-        return font
-    }
-}
 
 class FightTableViewCell: UITableViewCell{
     
@@ -46,14 +23,14 @@ class FightTableViewCell: UITableViewCell{
     }
     
     lazy var crownBtn = UIButton().then{
-        $0.titleLabel?.font = UIFont.pretendard(size: 15, family: .Bold)
+        $0.titleLabel?.font = UIFont.notosans(size: 15, family: .Bold)
         $0.setTitleColor(UIColor(red: 106/255, green: 106/255, blue: 106/255, alpha: 1), for: .normal)
         $0.setTitle("🏆 명예 히스토리", for: .normal)
     }
     
     let titleLabel = UILabel().then{
         $0.text = "누가 더 라떼인가"
-        $0.font = UIFont.pretendard(size: 30, family: .Bold)
+        $0.font = UIFont.notosans(size: 30, family: .Bold)
     }
     
     lazy var topChoiceBtn = UIButton().then{
@@ -68,7 +45,7 @@ class FightTableViewCell: UITableViewCell{
     
     let versusLabel = UILabel().then{
         $0.text = "VS"
-        $0.font = UIFont.pretendard(size: 67, family: .Regular)
+        $0.font = UIFont.notosans(size: 67, family: .Regular)
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -153,17 +130,17 @@ class ChatTableViewCell: UITableViewCell {
     
     let nicknameLabel = UILabel().then{
         $0.text = "노란싹수대장"
-        $0.font = UIFont.pretendard(size: 14, family: .Bold)
+        $0.font = UIFont.notosans(size: 14, family: .Bold)
     }
     
     let timeLabel = UILabel().then{
         $0.text = "30분 전"
-        $0.font = UIFont.pretendard(size: 14, family: .Regular)
+        $0.font = UIFont.notosans(size: 14, family: .Regular)
     }
     
     let messageLabel = UILabel().then{
         $0.text = "완전 어이없삼. 요즘"
-        $0.font = UIFont.pretendard(size: 16, family: .Regular)
+        $0.font = UIFont.notosans(size: 16, family: .Regular)
     }
     
     let borderLine = UIView().then{
@@ -248,7 +225,7 @@ class ChatTitleViewCell: UITableViewCell{
     let baseView = UIView()
     
     let chatCountLabel = UILabel().then{
-        $0.font = UIFont.pretendard(size: 16, family: .Medium)
+        $0.font = UIFont.notosans(size: 16, family: .Medium)
         $0.text = "댓글 0개"
     }
     
