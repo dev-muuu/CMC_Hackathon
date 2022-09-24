@@ -68,7 +68,8 @@ final class CommentTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectedBackgroundView = UIView()
         
-        setup()
+        setUpView()
+        setUpConstraint()
     }
     
     required init?(coder: NSCoder) {
