@@ -91,8 +91,13 @@ final class CommentTableViewCell: UITableViewCell {
     }
     
     func setUpConstraint() {
+//        contentView.snp.makeConstraints {
+//            $0.top.equalToSuperview().offset(40)
+//        }
+        
         baseView.snp.makeConstraints{
             $0.top.bottom.leading.trailing.equalToSuperview()
+           
         }
         userImage.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(25)
