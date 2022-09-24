@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072C533B28DF41E200FB2049 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */; };
+		072C533C28DF41E200FB2049 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */; };
 		0765138B28DF2BD900BCB0BD /* detailPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138A28DF2BD900BCB0BD /* detailPostTableViewCell.swift */; };
 		0765138D28DF2BE700BCB0BD /* commentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138C28DF2BE700BCB0BD /* commentTableViewCell.swift */; };
 		0765138F28DF2BF300BCB0BD /* detailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138E28DF2BF300BCB0BD /* detailPostViewController.swift */; };
@@ -37,8 +39,6 @@
 		57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */; };
 		57E75E8528DEF25800AC24B2 /* CrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8428DEF25800AC24B2 /* CrownViewController.swift */; };
 		57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8E28DF3C1100AC24B2 /* UIFont.swift */; };
-		57E75E9628DF3C6A00AC24B2 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E9428DF3C6A00AC24B2 /* NotoSansKR-Bold.otf */; };
-		57E75E9728DF3C6A00AC24B2 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57E75E9528DF3C6A00AC24B2 /* NotoSansKR-Medium.otf */; };
 		8ADF375328DEFC6000EA6C14 /* Community in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF375228DEFC6000EA6C14 /* Community */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		0765138A28DF2BD900BCB0BD /* detailPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPostTableViewCell.swift; sourceTree = "<group>"; };
 		0765138C28DF2BE700BCB0BD /* commentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentTableViewCell.swift; sourceTree = "<group>"; };
 		0765138E28DF2BF300BCB0BD /* detailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPostViewController.swift; sourceTree = "<group>"; };
@@ -95,8 +97,6 @@
 		57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		57E75E8428DEF25800AC24B2 /* CrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrownViewController.swift; sourceTree = "<group>"; };
 		57E75E8E28DF3C1100AC24B2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
-		57E75E9428DF3C6A00AC24B2 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Bold.otf"; path = "../../../../../Noto_Sans_KR/NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		57E75E9528DF3C6A00AC24B2 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "NotoSansKR-Medium.otf"; path = "../../../../../Noto_Sans_KR/NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		5B58B63550D28EF472FBB196 /* Pods-Hackathon-HackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -287,8 +287,8 @@
 		57E75E8D28DF3C0100AC24B2 /* UIFont */ = {
 			isa = PBXGroup;
 			children = (
-				57E75E9428DF3C6A00AC24B2 /* NotoSansKR-Bold.otf */,
-				57E75E9528DF3C6A00AC24B2 /* NotoSansKR-Medium.otf */,
+				072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */,
+				072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */,
 				57E75E8E28DF3C1100AC24B2 /* UIFont.swift */,
 			);
 			path = UIFont;
@@ -415,13 +415,13 @@
 			files = (
 				57E75E4628DEE20000AC24B2 /* LaunchScreen.storyboard in Resources */,
 				57E75E6E28DEE3B800AC24B2 /* SAMSIKKI.storyboard in Resources */,
-				57E75E9728DF3C6A00AC24B2 /* NotoSansKR-Medium.otf in Resources */,
 				57E75E7028DEE3C900AC24B2 /* JUN.storyboard in Resources */,
 				57E75E4328DEE20000AC24B2 /* Assets.xcassets in Resources */,
-				57E75E9628DF3C6A00AC24B2 /* NotoSansKR-Bold.otf in Resources */,
 				57E75E6C28DEE3A100AC24B2 /* SSOOYA.storyboard in Resources */,
 				57E75E4128DEE1F100AC24B2 /* Main.storyboard in Resources */,
 				8ADF375328DEFC6000EA6C14 /* Community in Resources */,
+				072C533B28DF41E200FB2049 /* NotoSansKR-Medium.otf in Resources */,
+				072C533C28DF41E200FB2049 /* NotoSansKR-Bold.otf in Resources */,
 				57E75E7228DEE3D600AC24B2 /* RIA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
