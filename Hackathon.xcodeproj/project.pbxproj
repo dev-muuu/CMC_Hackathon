@@ -31,6 +31,7 @@
 		57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8028DEF22B00AC24B2 /* VoteXtabView.swift */; };
 		57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */; };
 		57E75E8528DEF25800AC24B2 /* CrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8428DEF25800AC24B2 /* CrownViewController.swift */; };
+		8ADF375328DEFC6000EA6C14 /* Community in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF375228DEFC6000EA6C14 /* Community */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		5B58B63550D28EF472FBB196 /* Pods-Hackathon-HackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
+		8ADF375228DEFC6000EA6C14 /* Community */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Community; sourceTree = "<group>"; };
 		A931D615A03708FF4138BBE1 /* Pods-HackathonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonTests.debug.xcconfig"; path = "Target Support Files/Pods-HackathonTests/Pods-HackathonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A7E4A0D5827ED5D80DD091 /* Pods-Hackathon-HackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4CD9783947AE581F25A37BB /* Pods-HackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonTests.release.xcconfig"; path = "Target Support Files/Pods-HackathonTests/Pods-HackathonTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 		57E75E6A28DEE38B00AC24B2 /* domain */ = {
 			isa = PBXGroup;
 			children = (
+				8ADF375228DEFC6000EA6C14 /* Community */,
 				57E75E7328DEF19600AC24B2 /* Vote */,
 			);
 			path = domain;
@@ -358,6 +361,7 @@
 				57E75E4328DEE20000AC24B2 /* Assets.xcassets in Resources */,
 				57E75E6C28DEE3A100AC24B2 /* SSOOYA.storyboard in Resources */,
 				57E75E4128DEE1F100AC24B2 /* Main.storyboard in Resources */,
+				8ADF375328DEFC6000EA6C14 /* Community in Resources */,
 				57E75E7228DEE3D600AC24B2 /* RIA.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
