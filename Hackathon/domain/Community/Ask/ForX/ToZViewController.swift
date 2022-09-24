@@ -1,13 +1,13 @@
 //
-//  ToXViewController.swift
+//  ToZViewController.swift
 //  Hackathon
 //
-//  Created by 김사랑 on 2022/09/24.
+//  Created by 김사랑 on 2022/09/25.
 //
 
 import UIKit
 
-class ToXViewController: UIViewController {
+class ToZViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

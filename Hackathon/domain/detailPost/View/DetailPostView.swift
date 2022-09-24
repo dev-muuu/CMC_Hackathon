@@ -12,8 +12,11 @@ class DetailPostView: UIView {
     
     let tableView = UITableView().then{
         $0.showsVerticalScrollIndicator = false
+        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         
+        $0.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellIdentifier)
         $0.register(DetailPostTableViewCell.self, forCellReuseIdentifier: DetailPostTableViewCell.cellIdentifier)
+//        $0.register(ChatTitleViewCell.self, forCellReuseIdentifier: DetailPostTableViewCell.cellIdentifier)
         $0.register(CommentTableViewCell.self, forCellReuseIdentifier: CommentTableViewCell.cellIdentifier)
     }
 
