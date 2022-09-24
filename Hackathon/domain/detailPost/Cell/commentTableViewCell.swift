@@ -68,7 +68,7 @@ final class commentTableViewCell: UITableViewCell {
         
         userImage.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(25)
-            $0.top.equalToSuperview().offset(75)
+            $0.top.equalToSuperview().offset(15)
             $0.bottom.equalToSuperview().inset(3)
             $0.height.equalTo(50)
             $0.width.equalTo(50)
@@ -80,7 +80,7 @@ final class commentTableViewCell: UITableViewCell {
         }
         
         comment.snp.makeConstraints {
-            $0.top.equalTo(nickname.snp.bottom).offset(10)
+            $0.top.equalTo(nickname.snp.bottom).offset(5)
             $0.leading.equalTo(nickname)
         }
         

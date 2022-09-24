@@ -47,6 +47,10 @@ extension detailPostViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? commentTableViewCell
+//
+//        if indexPath.row == 0 {
+//            cell?.backgroundColor = .orange
+//        }
         cell?.selectionStyle = .none
         cell?.setup()
    
