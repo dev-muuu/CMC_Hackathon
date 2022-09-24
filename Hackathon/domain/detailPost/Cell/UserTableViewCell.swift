@@ -5,7 +5,6 @@
 //  Created by 양채연 on 2022/09/24.
 //
 
-import Foundation
 import SnapKit
 import UIKit
 import Then
@@ -23,7 +22,6 @@ final class UserTableViewCell: UITableViewCell {
     
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .black
         imageView.image = UIImage(named: "ZLogoSmall")
         imageView.layer.cornerRadius = CGFloat(27.5)
         imageView.clipsToBounds = true
@@ -45,6 +43,8 @@ final class UserTableViewCell: UITableViewCell {
     
     
     // MARK: - Function
+    
+    
     
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -74,8 +74,9 @@ final class UserTableViewCell: UITableViewCell {
         userImage.snp.makeConstraints{
             $0.height.equalTo(55)
             $0.width.equalTo(55)
-            $0.top.equalToSuperview().offset(50)
             $0.leading.equalToSuperview().offset(25)
+            $0.top.equalToSuperview().offset(5)
+            $0.bottom.equalToSuperview().offset(-5)
         }
         
         nickname.snp.makeConstraints{

@@ -75,6 +75,15 @@ class DetailPostTableViewCell: UITableViewCell {
         $0.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     }
     
+    final lazy var commentCnt: UILabel = {
+       let commentCnt = UILabel()
+        commentCnt.text = "댓글 0개"
+        commentCnt.textColor = .darkGray
+        commentCnt.font = UIFont.notosans(size: 20, family: .Regular)
+        
+        return commentCnt
+    }()
+    
     // MARK: - Function
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -96,6 +105,7 @@ class DetailPostTableViewCell: UITableViewCell {
         baseView.addSubview(postView)
         baseView.addSubview(sadBtn)
         baseView.addSubview(borderLine)
+        baseView.addSubview(commentCnt)
 
     }
     
@@ -106,7 +116,7 @@ class DetailPostTableViewCell: UITableViewCell {
         }
         
         postView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(60)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(20)
             $0.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(300)
@@ -129,9 +139,16 @@ class DetailPostTableViewCell: UITableViewCell {
             $0.leading.equalTo(postView.snp.trailing).offset(-30)
             
         }
+        
         borderLine.snp.makeConstraints{
             $0.height.equalTo(1)
             $0.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        commentCnt.snp.makeConstraints {
+            $0.top.equalTo(borderLine.snp.bottom).offset(-25)
+            $0.leading.equalTo(postView)
+//            $0.bottom.equalToSuperview().offset(40)
         }
         
     }
