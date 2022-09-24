@@ -12,62 +12,52 @@ import Then
 
 class DetailPostViewController: UIViewController {
 
-    // MARK: - Init
-    convenience init(bgColor: UIColor) {
-        self.init()
-        self.view.backgroundColor = bgColor
-    }
-    
     // MARK: - Property
     
-    private lazy var tableview: UITableView = {
-        let tableView = UITableView(frame: .zero)
-        tableView.backgroundColor = .systemBackground
-        tableView.separatorStyle = .none
-        tableView.dataSource = self
-
-        tableView.register(CommentTableViewCell.self, forCellReuseIdentifier: "CommentTableViewCell")
-
-        return tableView
-    }()
     
+    let mainView = DetailPostView()
     
+    var chatData: [Int] = [1,2,3,4,5] //default = []
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        setupTableView()
 
-        // Do any additional setup after loading the view.
-    }
-
-}
-
-extension DetailPostViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentTableViewCell", for: indexPath) as? CommentTableViewCell
-//
-//        if indexPath.row == 0 {
-//            cell?.backgroundColor = .orange
-//        }
-        cell?.selectionStyle = .none
-        cell?.setup()
-   
-
-        return cell ?? UITableViewCell()
-    }
-
-}
-
-private extension DetailPostViewController {
-    func setupTableView() {
-        view.addSubview(tableview)
-        tableview.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+        self.view.addSubview(mainView)
+        
+        mainView.tableView.delegate = self
+        mainView.tableView.dataSource = self
+        mainView.tableView.separatorStyle = .none
+        
+        mainView.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(50)
+            $0.bottom.leading.trailing.equalToSuperview()
         }
-//        tableView.snp.makeConstraints{
-//            $0.edges.equalToSuperview()}
     }
+
 }
 
+
+
+
+extension DetailPostViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return chatData.count + 2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row{
+        case 0:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: UserTableViewCell.cellIdentifier, for: indexPath) as? UserTableViewCell else { fatalError() }
+            return cell
+            
+        case 1:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailPostTableViewCell.cellIdentifier, for: indexPath) as? DetailPostTableViewCell else { fatalError() }
+            return cell
+        default:
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.cellIdentifier, for: indexPath) as? CommentTableViewCell else { fatalError() }
+            return cell
+        }
+    }
+}

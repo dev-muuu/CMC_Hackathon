@@ -15,6 +15,7 @@ class DetailPostView: UIView {
         
         $0.register(DetailPostTableViewCell.self, forCellReuseIdentifier: DetailPostTableViewCell.cellIdentifier)
         $0.register(CommentTableViewCell.self, forCellReuseIdentifier: CommentTableViewCell.cellIdentifier)
+        $0.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellIdentifier)
     }
 
     override init(frame: CGRect) {
