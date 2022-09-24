@@ -28,14 +28,6 @@ class VoteViewController: UIViewController {
             $0.top.equalToSuperview().offset(50)
             $0.bottom.leading.trailing.equalToSuperview()
         }
-        
-        for family in UIFont.familyNames {
-            print("\(family)");
-                        
-            for names in UIFont.fontNames(forFamilyName: family) {
-                print("== \(names)");
-            }
-        }
     }
 
 }

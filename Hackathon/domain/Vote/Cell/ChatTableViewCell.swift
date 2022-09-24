@@ -10,6 +10,10 @@ import Then
 import SnapKit
 
 
+extension UIColor{
+    static let projectBrown = UIColor(red: 220/255, green: 203/255, blue: 172/255, alpha: 1)
+}
+
 class FightTableViewCell: UITableViewCell{
     
     //MARK: - Properties
@@ -30,15 +34,18 @@ class FightTableViewCell: UITableViewCell{
     
     let titleLabel = UILabel().then{
         $0.text = "누가 더 라떼인가"
-        $0.font = UIFont.notosans(size: 30, family: .Bold)
+        $0.font = UIFont.notosans(size: 28, family: .Bold)
     }
     
     lazy var topChoiceBtn = UIButton().then{
-        $0.backgroundColor = .yellow
+        $0.backgroundColor = .projectBrown
         $0.layer.cornerRadius = 16
+        $0.titleLabel?.font = UIFont.notosans(size: 20, family: .Bold)
+        $0.titleLabel?.textAlignment = .center
     }
     
     lazy var bottomChoiceBtn = UIButton().then{
+        $0.backgroundColor = .projectBrown
         $0.backgroundColor = .yellow
         $0.layer.cornerRadius = 16
     }
@@ -51,6 +58,8 @@ class FightTableViewCell: UITableViewCell{
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
+        
+        self.selectedBackgroundView = UIView()
         setUpView()
         setUpConstraint()
     }
@@ -150,6 +159,7 @@ class ChatTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.selectedBackgroundView = UIView()
         
         setUpView()
         setUpConstraint()
@@ -235,6 +245,8 @@ class ChatTitleViewCell: UITableViewCell{
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.selectedBackgroundView = UIView()
         
         setUpView()
         setUpConstraint()
