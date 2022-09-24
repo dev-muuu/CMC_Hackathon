@@ -106,7 +106,7 @@ class DetailPostTableViewCell: UITableViewCell {
         }
         
         postView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(60)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview().inset(20)
             $0.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(300)

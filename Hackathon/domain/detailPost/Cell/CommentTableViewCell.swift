@@ -22,7 +22,6 @@ final class CommentTableViewCell: UITableViewCell {
     
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .black
         imageView.image = UIImage(named: "ZLogoSmall")
         imageView.layer.cornerRadius = CGFloat(27.5)
         imageView.clipsToBounds = true
