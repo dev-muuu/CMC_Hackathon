@@ -12,6 +12,15 @@ class Const{
     static let DEVICE_HEIGTH = UIScreen.main.bounds.size.height
 }
 
+extension UIColor{
+    
+    static let lightYellow = UIColor(red: 252/255, green: 239/255, blue: 165/255, alpha: 1)
+    static let deepYellow = UIColor(red: 254/255, green: 250/255, blue: 229/255, alpha: 1)
+    
+    static let lightBrown = UIColor(red: 241/255, green: 233/255, blue: 217/255, alpha: 1)
+    static let deepBrown = UIColor(red: 220/255, green: 203/255, blue: 172/255, alpha: 1)
+}
+
 class FightTableViewCell: UITableViewCell{
     
     //MARK: - Properties
@@ -19,6 +28,27 @@ class FightTableViewCell: UITableViewCell{
     static let cellIdentifier = "FightTableViewCell"
     
     var superViewController: VoteViewController!
+    
+    var type: FightType!{
+        didSet{
+            print("type setting?")
+            print(type)
+            self.topChoiceBtn.backgroundColor = type.lightColor
+            self.bottomChoiceBtn.backgroundColor = type.deepColor
+        }
+    }
+    
+    var didVote = false{
+        didSet{
+            superViewController.mainView.tableView.reloadData()
+        }
+    }
+    
+    var chatCount: Int = 0{
+        didSet{
+            chatCountLabel.text = "댓글 \(self.chatCount)개"
+        }
+    }
     
     //MARK: - UI
     
@@ -31,8 +61,18 @@ class FightTableViewCell: UITableViewCell{
         $0.font = UIFont.notosans(size: 28, family: .Bold)
     }
     
+    let choiceTag = UILabel().then{
+        $0.text = "My Pick"
+        $0.font = UIFont.notosans(size: 15, family: .Bold)
+        $0.clipsToBounds = true
+        $0.layer.cornerRadius = 32/2
+        $0.backgroundColor = .white
+        $0.textAlignment = .center
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor(red: 25/255, green: 25/255, blue: 25/255, alpha: 1).cgColor
+    }
+    
     lazy var topChoiceBtn = UIButton().then{
-        $0.backgroundColor = .lightBrown
         $0.layer.cornerRadius = 16
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.numberOfLines = 0
@@ -45,7 +85,6 @@ class FightTableViewCell: UITableViewCell{
     }
     
     lazy var bottomChoiceBtn = UIButton().then{
-        $0.backgroundColor = .deepBrown
         $0.layer.cornerRadius = 16
         $0.setTitleColor(.black, for: .normal)
         $0.titleLabel?.numberOfLines = 0
@@ -65,10 +104,21 @@ class FightTableViewCell: UITableViewCell{
         $0.font = UIFont.notosans(size: 67, family: .Regular)
     }
     
+    let chatCountLabel = UILabel().then{
+        $0.font = UIFont.notosans(size: 16, family: .Medium)
+        $0.textColor = UIColor(red: 120/255, green: 120/255, blue: 120/255, alpha: 1)
+        $0.text = "댓글 0개"
+    }
+    
+    let borderLine = UIView().then{
+        $0.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+
         self.selectedBackgroundView = UIView()
+        
         setUpView()
         setUpConstraint()
     }
@@ -87,6 +137,8 @@ class FightTableViewCell: UITableViewCell{
         baseView.addSubview(versusFrame)
         baseView.addSubview(versusLabel)
         baseView.addSubview(bottomChoiceBtn)
+        baseView.addSubview(chatCountLabel)
+        baseView.addSubview(borderLine)
     }
     
     func setUpConstraint(){
@@ -119,7 +171,17 @@ class FightTableViewCell: UITableViewCell{
             $0.leading.equalToSuperview().offset(34)
             $0.centerX.equalToSuperview()
             $0.height.equalTo(148)
-            $0.bottom.equalToSuperview()
+        }
+        
+        chatCountLabel.snp.makeConstraints{
+            $0.top.equalTo(bottomChoiceBtn.snp.bottom).offset(36)
+            $0.trailing.equalToSuperview().offset(-15)
+            $0.bottom.equalToSuperview().offset(-18)
+        }
+        
+        borderLine.snp.makeConstraints{
+            $0.height.equalTo(1)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
     }
     
@@ -140,7 +202,7 @@ class FightTableViewCell: UITableViewCell{
         //TODO: - MyPick label 추가
         versusLabel.removeFromSuperview()
     
-        let percentageView = PercentageView(high: 88, low: 12)
+        let percentageView = PercentageView(type: self.type, high: 88, low: 12)
         versusFrame.addSubview(percentageView)
         
         percentageView.snp.makeConstraints{
@@ -153,8 +215,17 @@ class FightTableViewCell: UITableViewCell{
     
     }
     
-    @objc func choiceBtnDidClicked(){
-        superViewController!.didVote = true
+    @objc func choiceBtnDidClicked(_ sender: UIButton){
+        self.didVote = true
+        
+        sender.addSubview(choiceTag)
+        
+        choiceTag.snp.makeConstraints{
+            $0.bottom.equalToSuperview().offset(-6)
+            $0.trailing.equalToSuperview().offset(-6)
+            $0.width.equalTo(75)
+            $0.height.equalTo(32)
+        }
     }
 }
 
@@ -166,7 +237,6 @@ extension FightTableViewCell{
         var lowPercentage: CGFloat!
         
         let highPercentageView = UILabel().then{
-            $0.backgroundColor = .deepBrown
             $0.layer.cornerRadius  = 16
             $0.clipsToBounds = true
             $0.textAlignment = .center
@@ -179,16 +249,18 @@ extension FightTableViewCell{
         }
         
         let lowPercentageView = UIView().then{
-            $0.backgroundColor = .lightBrown
             $0.layer.cornerRadius  = 16
             $0.clipsToBounds = true
         }
         
-        init(high: CGFloat, low: CGFloat){
+        init(type: FightType,high: CGFloat, low: CGFloat){
             
             super.init(frame: .zero)
             
             self.highPercentage = high
+            
+            highPercentageView.backgroundColor = type.deepColor
+            lowPercentageView.backgroundColor = type.lightColor
             
             highPercentageView.text = "\(Int(high))%"
             lowPercentageLabel.text = "\(Int(low))%"
@@ -206,7 +278,6 @@ extension FightTableViewCell{
             lowPercentageView.snp.makeConstraints{
                 $0.top.trailing.bottom.equalToSuperview()
                 $0.leading.equalToSuperview()
-//                $0.leading.equalToSuperview()
             }
             
             lowPercentageLabel.snp.makeConstraints{
@@ -233,4 +304,28 @@ extension FightTableViewCell{
             
         }
     }
+}
+
+class FightType{
+    var lightColor : UIColor!
+    var deepColor: UIColor!
+    
+    init(light: UIColor, deep: UIColor){
+        self.lightColor = light
+        self.deepColor = deep
+    }
+}
+
+class Xgeneration: FightType{
+    init(){
+        super.init(light: .lightBrown, deep: .deepBrown)
+    }
+
+}
+
+class Zgeneration: FightType{
+    init(){
+        super.init(light: .lightYellow, deep: .deepYellow)
+    }
+
 }

@@ -9,12 +9,6 @@ import UIKit
 import Then
 import SnapKit
 
-
-extension UIColor{
-    static let lightBrown = UIColor(red: 241/255, green: 233/255, blue: 217/255, alpha: 1)
-    static let deepBrown = UIColor(red: 220/255, green: 203/255, blue: 172/255, alpha: 1)
-}
-
 class ChatTableViewCell: UITableViewCell {
     
     static let cellIdentifier = "ChatTableViewCell"
