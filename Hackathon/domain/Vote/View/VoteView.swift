@@ -7,13 +7,8 @@
 
 import UIKit
 
-class VoteView: UIViewController {
+class VoteView: UIView {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
 
     /*

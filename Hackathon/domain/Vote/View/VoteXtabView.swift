@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VoteXtabView: UIViewController {
+class VoteXtabView: UIView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
