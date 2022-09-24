@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		072C533B28DF41E200FB2049 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */; };
 		072C533C28DF41E200FB2049 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */; };
-		0765138B28DF2BD900BCB0BD /* detailPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138A28DF2BD900BCB0BD /* detailPostTableViewCell.swift */; };
-		0765138D28DF2BE700BCB0BD /* commentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138C28DF2BE700BCB0BD /* commentTableViewCell.swift */; };
-		0765138F28DF2BF300BCB0BD /* detailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138E28DF2BF300BCB0BD /* detailPostViewController.swift */; };
+		074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FFC7828DF47060050D332 /* DetailPostView.swift */; };
+		0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */; };
+		0765138D28DF2BE700BCB0BD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */; };
+		0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138E28DF2BF300BCB0BD /* DetailPostViewController.swift */; };
 		27BAFE9FB499C0BD5C6AA1F0 /* Pods_Hackathon_HackathonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55B8449772D510CD207CA8CC /* Pods_Hackathon_HackathonUITests.framework */; };
 		2EAF3F3307F76D2CA1DAE0B7 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CA391256D5FB42BA67913D4 /* Pods_Hackathon.framework */; };
 		3D38F6D49D3CE1B86E85A204 /* Pods_HackathonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1401094316DA740DB46498CD /* Pods_HackathonTests.framework */; };
@@ -62,9 +63,10 @@
 /* Begin PBXFileReference section */
 		072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		0765138A28DF2BD900BCB0BD /* detailPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPostTableViewCell.swift; sourceTree = "<group>"; };
-		0765138C28DF2BE700BCB0BD /* commentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = commentTableViewCell.swift; sourceTree = "<group>"; };
-		0765138E28DF2BF300BCB0BD /* detailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailPostViewController.swift; sourceTree = "<group>"; };
+		074FFC7828DF47060050D332 /* DetailPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostView.swift; sourceTree = "<group>"; };
+		0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostTableViewCell.swift; sourceTree = "<group>"; };
+		0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
+		0765138E28DF2BF300BCB0BD /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
 		0CA391256D5FB42BA67913D4 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1401094316DA740DB46498CD /* Pods_HackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473A917628DF2F0D0050D389 /* kakaoLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoLoginPage.swift; sourceTree = "<group>"; };
@@ -134,11 +136,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		074FFC7728DF46EB0050D332 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				074FFC7828DF47060050D332 /* DetailPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0765138828DF2BC200BCB0BD /* detailPost */ = {
 			isa = PBXGroup;
 			children = (
+				074FFC7728DF46EB0050D332 /* View */,
 				0765138928DF2BC900BCB0BD /* Cell */,
-				0765138E28DF2BF300BCB0BD /* detailPostViewController.swift */,
+				0765138E28DF2BF300BCB0BD /* DetailPostViewController.swift */,
 			);
 			path = detailPost;
 			sourceTree = "<group>";
@@ -146,8 +157,8 @@
 		0765138928DF2BC900BCB0BD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				0765138A28DF2BD900BCB0BD /* detailPostTableViewCell.swift */,
-				0765138C28DF2BE700BCB0BD /* commentTableViewCell.swift */,
+				0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */,
+				0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -553,16 +564,17 @@
 				57E75E8528DEF25800AC24B2 /* CrownViewController.swift in Sources */,
 				57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */,
 				57E75E7528DEF1CD00AC24B2 /* VoteViewController.swift in Sources */,
-				0765138D28DF2BE700BCB0BD /* commentTableViewCell.swift in Sources */,
-				0765138F28DF2BF300BCB0BD /* detailPostViewController.swift in Sources */,
+				0765138D28DF2BE700BCB0BD /* CommentTableViewCell.swift in Sources */,
+				0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */,
 				57E75E7928DEF1EC00AC24B2 /* VoteXtabViewController.swift in Sources */,
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
 				57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */,
 				57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */,
 				473A917928DF2F260050D389 /* loginDetail.swift in Sources */,
 				57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */,
+				074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */,
 				57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */,
-				0765138B28DF2BD900BCB0BD /* detailPostTableViewCell.swift in Sources */,
+				0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */,
 				57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */,
 				473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */,
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,

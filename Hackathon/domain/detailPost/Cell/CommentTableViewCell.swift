@@ -10,11 +10,11 @@ import SnapKit
 import UIKit
 import Then
 
-final class commentTableViewCell: UITableViewCell {
+final class CommentTableViewCell: UITableViewCell {
     
     // MARK: - Property
     
-    static let cellIdentifier = "commentTableViewCell"
+    static let cellIdentifier = "CommentTableViewCell"
     
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
