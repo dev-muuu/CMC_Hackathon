@@ -47,6 +47,10 @@
 		57E75EA828DFA8E000AC24B2 /* CommentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA728DFA8E000AC24B2 /* CommentInput.swift */; };
 		57E75EAA28DFA8E800AC24B2 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA928DFA8E800AC24B2 /* CommentModel.swift */; };
 		8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16E77928DF6BBB0011FD66 /* CommunityMainViewController.swift */; };
+		8A16E78128DF84C20011FD66 /* CustomGroupXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16E77F28DF84C10011FD66 /* CustomGroupXTableViewCell.swift */; };
+		8A16E78228DF84C20011FD66 /* CustomGroupXTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A16E78028DF84C10011FD66 /* CustomGroupXTableViewCell.xib */; };
+		8A16E78528DF85080011FD66 /* CustomGroupZTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16E78328DF85080011FD66 /* CustomGroupZTableViewCell.swift */; };
+		8A16E78628DF85080011FD66 /* CustomGroupZTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A16E78428DF85080011FD66 /* CustomGroupZTableViewCell.xib */; };
 		8AD1BAC328DF64FE00260E5E /* ToXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC228DF64FE00260E5E /* ToXViewController.swift */; };
 		8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC428DF651E00260E5E /* ToZViewController.swift */; };
 		8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC728DF657B00260E5E /* XAskViewController.swift */; };
@@ -122,6 +126,10 @@
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		8A16E77928DF6BBB0011FD66 /* CommunityMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainViewController.swift; sourceTree = "<group>"; };
+		8A16E77F28DF84C10011FD66 /* CustomGroupXTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupXTableViewCell.swift; sourceTree = "<group>"; };
+		8A16E78028DF84C10011FD66 /* CustomGroupXTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomGroupXTableViewCell.xib; sourceTree = "<group>"; };
+		8A16E78328DF85080011FD66 /* CustomGroupZTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomGroupZTableViewCell.swift; sourceTree = "<group>"; };
+		8A16E78428DF85080011FD66 /* CustomGroupZTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomGroupZTableViewCell.xib; sourceTree = "<group>"; };
 		8AD1BAC228DF64FE00260E5E /* ToXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToXViewController.swift; sourceTree = "<group>"; };
 		8AD1BAC428DF651E00260E5E /* ToZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToZViewController.swift; sourceTree = "<group>"; };
 		8AD1BAC728DF657B00260E5E /* XAskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAskViewController.swift; sourceTree = "<group>"; };
@@ -392,8 +400,10 @@
 		8AD1BACC28DF659D00260E5E /* GroupZ */ = {
 			isa = PBXGroup;
 			children = (
-				8AD1BAD628DF663900260E5E /* ZWritePostViewController.swift */,
 				8AD1BAD428DF662C00260E5E /* GroupZViewController.swift */,
+				8A16E78428DF85080011FD66 /* CustomGroupZTableViewCell.xib */,
+				8A16E78328DF85080011FD66 /* CustomGroupZTableViewCell.swift */,
+				8AD1BAD628DF663900260E5E /* ZWritePostViewController.swift */,
 			);
 			path = GroupZ;
 			sourceTree = "<group>";
@@ -420,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				8AD1BAD028DF660F00260E5E /* GroupXViewController.swift */,
+				8A16E78028DF84C10011FD66 /* CustomGroupXTableViewCell.xib */,
+				8A16E77F28DF84C10011FD66 /* CustomGroupXTableViewCell.swift */,
 				8AD1BAD228DF661E00260E5E /* XWritePostViewController.swift */,
 			);
 			name = GroupX;
@@ -545,8 +557,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A16E78628DF85080011FD66 /* CustomGroupZTableViewCell.xib in Resources */,
 				57E75E4628DEE20000AC24B2 /* LaunchScreen.storyboard in Resources */,
 				57E75E6E28DEE3B800AC24B2 /* SAMSIKKI.storyboard in Resources */,
+				8A16E78228DF84C20011FD66 /* CustomGroupXTableViewCell.xib in Resources */,
 				57E75E7028DEE3C900AC24B2 /* JUN.storyboard in Resources */,
 				57E75E4328DEE20000AC24B2 /* Assets.xcassets in Resources */,
 				57E75E6C28DEE3A100AC24B2 /* SSOOYA.storyboard in Resources */,
@@ -697,7 +711,7 @@
 				8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */,
 				8AD1BAD128DF660F00260E5E /* GroupXViewController.swift in Sources */,
 				473A917928DF2F260050D389 /* loginDetail.swift in Sources */,
-				57E75EA628DFA8D700AC24B2 /* CommentDataManager.swift in Sources */,
+				8A16E78528DF85080011FD66 /* CustomGroupZTableViewCell.swift in Sources */,
 				8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */,
 				074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */,
 				57E75EA128DFA8B100AC24B2 /* VoteInput.swift in Sources */,
@@ -710,8 +724,7 @@
 				473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */,
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,
 				57E75E7F28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift in Sources */,
-				57E75E9F28DFA8A400AC24B2 /* VoteDataManager.swift in Sources */,
-				57E75EAA28DFA8E800AC24B2 /* CommentModel.swift in Sources */,
+				8A16E78128DF84C20011FD66 /* CustomGroupXTableViewCell.swift in Sources */,
 				8AD1BAD728DF663900260E5E /* ZWritePostViewController.swift in Sources */,
 				8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */,
 			);
