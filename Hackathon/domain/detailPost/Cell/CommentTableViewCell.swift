@@ -16,6 +16,10 @@ final class CommentTableViewCell: UITableViewCell {
     static let cellIdentifier = "CommentTableViewCell"
     
 
+    let baseView = UIView().then{
+        $0.backgroundColor = .white
+    }
+    
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .black
@@ -71,15 +75,19 @@ final class CommentTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-
-    func setup() {
-        [
-            userImage,
-            nickname,
-            comment,
-            time
-        ].forEach{addSubview($0)}
-        
+    
+    func setUpView() {
+        self.contentView.addSubview(baseView)
+        baseView.addSubview(userImage)
+        baseView.addSubview(nickname)
+        baseView.addSubview(comment)
+        baseView.addSubview(time)
+    }
+    
+    func setUpConstraint() {
+        baseView.snp.makeConstraints{
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
         userImage.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(25)
             $0.top.equalToSuperview().offset(15)
@@ -98,7 +106,7 @@ final class CommentTableViewCell: UITableViewCell {
             $0.leading.equalTo(nickname)
         }
         
-        
     }
+    
     
 }
