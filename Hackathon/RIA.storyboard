@@ -16,8 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltj-0N-8sN">
+                                <rect key="frame" x="33" y="90" width="111" height="45"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="우리끼리">
+                                        <attributes>
+                                            <font key="NSFont" size="30" name="NotoSansKR-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-qP-rDL">
-                                <rect key="frame" x="83" y="283" width="202" height="45"/>
+                                <rect key="frame" x="20" y="472" width="202" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="서로에게 물어요">
@@ -29,9 +40,11 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-pl-7zG">
-                                <rect key="frame" x="92" y="392" width="117" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UnionBrown" translatesAutoresizingMaskIntoConstraints="NO" id="nZo-5X-MZl">
+                                <rect key="frame" x="241" y="175" width="140" height="165"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-pl-7zG">
+                                <rect key="frame" x="45" y="145" width="117" height="30"/>
                                 <attributedString key="attributedText">
                                     <fragment content="노란싹수 모임">
                                         <attributes>
@@ -44,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-Uf-E1W">
-                                <rect key="frame" x="237" y="392" width="80" height="30"/>
+                                <rect key="frame" x="271" y="191" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="라떼 모임">
@@ -56,8 +69,16 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UnionYellow" translatesAutoresizingMaskIntoConstraints="NO" id="Kg6-GU-KAj">
+                                <rect key="frame" x="51" y="562" width="140" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UnionBrown" translatesAutoresizingMaskIntoConstraints="NO" id="n7i-vh-Z1h">
+                                <rect key="frame" x="241" y="562" width="140" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-sD-60D">
-                                <rect key="frame" x="109" y="434" width="108" height="30"/>
+                                <rect key="frame" x="67" y="584" width="108" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="To. 노란싹수">
@@ -70,7 +91,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-pH-zEC">
-                                <rect key="frame" x="263" y="430" width="71" height="30"/>
+                                <rect key="frame" x="276" y="584" width="71" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="To. ">
@@ -89,23 +110,20 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltj-0N-8sN">
-                                <rect key="frame" x="33" y="90" width="111" height="45"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="우리끼리">
-                                        <attributes>
-                                            <font key="NSFont" size="30" name="NotoSansKR-Bold"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UnionYellow" translatesAutoresizingMaskIntoConstraints="NO" id="X40-Yl-Hyp">
+                                <rect key="frame" x="35" y="183" width="140" height="165"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ltj-0N-8sN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="8O8-A3-HRF"/>
+                            <constraint firstAttribute="trailing" secondItem="nZo-5X-MZl" secondAttribute="trailing" constant="33" id="9n8-xo-l93"/>
+                            <constraint firstItem="HRF-pl-7zG" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="10" id="ADC-5N-yfy"/>
+                            <constraint firstItem="X40-Yl-Hyp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="H6G-Hr-Vh0"/>
+                            <constraint firstItem="nZo-5X-MZl" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="40" id="lhy-fd-xT8"/>
                             <constraint firstItem="ltj-0N-8sN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="46" id="seG-GL-ShM"/>
+                            <constraint firstItem="X40-Yl-Hyp" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="40" id="vo7-Rv-Dlm"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -116,7 +134,7 @@
         <!--GroupX View Controller-->
         <scene sceneID="2wa-eV-dL3">
             <objects>
-                <viewController storyboardIdentifier="GroupXVC" modalPresentationStyle="fullScreen" id="h2X-xK-2t0" customClass="GroupXViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupXVC" modalPresentationStyle="fullScreen" id="h2X-xK-2t0" customClass="GroupXViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0QN-zl-HkV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,6 +223,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="UnionBrown" width="140" height="165"/>
+        <image name="UnionYellow" width="140" height="165"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
