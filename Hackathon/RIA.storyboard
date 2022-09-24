@@ -79,6 +79,7 @@
                                     <tabBarItem image="Community" id="6jf-PI-4mP"/>
                                     <tabBarItem image="Profile" id="mih-zp-kOR"/>
                                 </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -102,10 +103,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CommunityBtn" destination="6jf-PI-4mP" id="2Zi-aU-fMg"/>
                         <outlet property="GoToAskX_ZBtn" destination="DUd-yA-p19" id="oTa-f0-mPu"/>
                         <outlet property="GoToAskZ_XBtn" destination="Ph0-eR-nKl" id="pP0-6i-cdo"/>
                         <outlet property="GoToGroupXBtn" destination="kH7-g8-AA0" id="bcR-VV-zVk"/>
                         <outlet property="GoToGroupZBtn" destination="t7g-Wo-qct" id="jw9-01-JeX"/>
+                        <outlet property="HomeBtn" destination="Osx-IS-rk2" id="n9L-y2-COO"/>
+                        <outlet property="ProfileBtn" destination="mih-zp-kOR" id="qJV-9Z-A4t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,13 +123,52 @@
                     <view key="view" contentMode="scaleToFill" id="0QN-zl-HkV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cJ-vS-ZNq">
+                                <rect key="frame" x="33" y="64" width="116.5" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="노란싹수 모임">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-iE-SRJ">
+                                <rect key="frame" x="301.5" y="64" width="79.5" height="30"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="라떼 모임">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Isl-NG-Ujp">
+                                <rect key="frame" x="77" y="210" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="yyE-Sm-cu8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yyE-Sm-cu8" firstAttribute="trailing" secondItem="7Ft-iE-SRJ" secondAttribute="trailing" constant="33" id="Tof-y2-TS2"/>
+                            <constraint firstItem="0cJ-vS-ZNq" firstAttribute="leading" secondItem="yyE-Sm-cu8" secondAttribute="leading" constant="33" id="der-eQ-Pza"/>
+                            <constraint firstItem="0cJ-vS-ZNq" firstAttribute="top" secondItem="yyE-Sm-cu8" secondAttribute="top" constant="20" id="lhl-nJ-cMH"/>
+                            <constraint firstItem="7Ft-iE-SRJ" firstAttribute="centerY" secondItem="0cJ-vS-ZNq" secondAttribute="centerY" id="xI2-at-8b1"/>
+                            <constraint firstItem="7Ft-iE-SRJ" firstAttribute="top" secondItem="yyE-Sm-cu8" secondAttribute="top" constant="20" id="xsS-1E-ebG"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dts-79-iok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="-60"/>
+            <point key="canvasLocation" x="1173.913043478261" y="-60.267857142857139"/>
         </scene>
         <!--GroupZ View Controller-->
         <scene sceneID="Ncy-oM-3G8">
@@ -134,13 +177,74 @@
                     <view key="view" contentMode="scaleToFill" id="S25-Zi-Xot">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-w6-TOa">
+                                <rect key="frame" x="0.0" y="125.5" width="414" height="653.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-Kp-ee0">
+                                <rect key="frame" x="0.0" y="779" width="414" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem image="Home" id="OOw-B5-2J9"/>
+                                    <tabBarItem image="Community" id="r0N-AM-QIA"/>
+                                    <tabBarItem image="Profile" id="gg2-hC-hCA"/>
+                                </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tabBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cco-dp-MXC">
+                                <rect key="frame" x="33" y="64" width="117" height="41.5"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="노란싹수 모임">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-9Y-8IS">
+                                <rect key="frame" x="301" y="64" width="80" height="41.5"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="라떼 모임">
+                                            <attributes>
+                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="u18-U4-Obj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eeS-w6-TOa" firstAttribute="leading" secondItem="u18-U4-Obj" secondAttribute="leading" id="3hV-B9-TyO"/>
+                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="leading" secondItem="u18-U4-Obj" secondAttribute="leading" id="8Iq-Gt-i6b"/>
+                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="trailing" secondItem="u18-U4-Obj" secondAttribute="trailing" id="B4g-dx-prc"/>
+                            <constraint firstItem="cco-dp-MXC" firstAttribute="leading" secondItem="u18-U4-Obj" secondAttribute="leading" constant="33" id="E3X-Lw-LYR"/>
+                            <constraint firstItem="u18-U4-Obj" firstAttribute="trailing" secondItem="hDU-9Y-8IS" secondAttribute="trailing" constant="33" id="GTB-a8-FZ8"/>
+                            <constraint firstItem="u18-U4-Obj" firstAttribute="trailing" secondItem="eeS-w6-TOa" secondAttribute="trailing" id="KCK-A9-tbK"/>
+                            <constraint firstItem="cco-dp-MXC" firstAttribute="top" secondItem="u18-U4-Obj" secondAttribute="top" constant="20" id="KcD-Lp-JsX"/>
+                            <constraint firstItem="eeS-w6-TOa" firstAttribute="top" secondItem="cco-dp-MXC" secondAttribute="bottom" constant="20" id="fFp-QF-Ulx"/>
+                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="top" secondItem="eeS-w6-TOa" secondAttribute="bottom" id="od6-Lt-evM"/>
+                            <constraint firstItem="hDU-9Y-8IS" firstAttribute="top" secondItem="u18-U4-Obj" secondAttribute="top" constant="20" id="pCC-1o-gOP"/>
+                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="bottom" secondItem="u18-U4-Obj" secondAttribute="bottom" id="pSc-4y-xYo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="eeS-w6-TOa" id="IeS-vH-X11"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ij-PQ-os0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="-783"/>
+            <point key="canvasLocation" x="1173.913043478261" y="-783.48214285714278"/>
         </scene>
         <!--ToX View Controller-->
         <scene sceneID="aHl-CR-oAk">
