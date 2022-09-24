@@ -7,7 +7,7 @@
 
 import UIKit
 
-class YAskViewController: UIViewController {
+class ZAskViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

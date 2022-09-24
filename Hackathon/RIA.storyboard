@@ -11,13 +11,13 @@
         <!--Community Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="CommunityMainVC" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="CommunityMainViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="CommunityMainViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltj-0N-8sN">
-                                <rect key="frame" x="33" y="90" width="111" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltj-0N-8sN">
+                                <rect key="frame" x="33" y="90" width="276" height="45"/>
                                 <attributedString key="attributedText">
                                     <fragment content="우리끼리">
                                         <attributes>
@@ -27,9 +27,8 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-qP-rDL">
-                                <rect key="frame" x="20" y="472" width="202" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-qP-rDL">
+                                <rect key="frame" x="33" y="407" width="202" height="45"/>
                                 <attributedString key="attributedText">
                                     <fragment content="서로에게 물어요">
                                         <attributes>
@@ -40,96 +39,78 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UnionBrown" translatesAutoresizingMaskIntoConstraints="NO" id="nZo-5X-MZl">
-                                <rect key="frame" x="241" y="175" width="140" height="165"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-pl-7zG">
-                                <rect key="frame" x="45" y="145" width="117" height="30"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="노란싹수 모임">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                            <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-Uf-E1W">
-                                <rect key="frame" x="271" y="191" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="라떼 모임">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UnionYellow" translatesAutoresizingMaskIntoConstraints="NO" id="Kg6-GU-KAj">
-                                <rect key="frame" x="51" y="562" width="140" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UnionBrown" translatesAutoresizingMaskIntoConstraints="NO" id="n7i-vh-Z1h">
-                                <rect key="frame" x="241" y="562" width="140" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-sD-60D">
-                                <rect key="frame" x="67" y="584" width="108" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="To. 노란싹수">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-pH-zEC">
-                                <rect key="frame" x="276" y="584" width="71" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="To. ">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                            <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="라떼">
-                                        <attributes>
-                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="UnionYellow" translatesAutoresizingMaskIntoConstraints="NO" id="X40-Yl-Hyp">
-                                <rect key="frame" x="35" y="183" width="140" height="165"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUd-yA-p19">
+                                <rect key="frame" x="33" y="492" width="167" height="182"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GoToAskX_ZBtn"/>
+                                <connections>
+                                    <segue destination="W1A-Gt-lfZ" kind="presentation" id="9nb-h0-zvW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph0-eR-nKl">
+                                <rect key="frame" x="217" y="493.5" width="164" height="179"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GoToAskZ_XBtn"/>
+                                <connections>
+                                    <segue destination="pko-t6-lMB" kind="presentation" id="nPK-OX-jVN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-g8-AA0">
+                                <rect key="frame" x="217" y="176.5" width="164" height="179"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GroupXBtn"/>
+                                <connections>
+                                    <segue destination="h2X-xK-2t0" kind="presentation" id="Z0W-fR-Uhc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-Wo-qct">
+                                <rect key="frame" x="33" y="175" width="164" height="182"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GroupZBtn"/>
+                                <connections>
+                                    <segue destination="2J9-MV-lWm" kind="presentation" id="VyS-av-IGB"/>
+                                </connections>
+                            </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oQW-sb-cs5">
+                                <rect key="frame" x="0.0" y="813" width="414" height="83"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem image="Home" id="Osx-IS-rk2"/>
+                                    <tabBarItem image="Community" id="6jf-PI-4mP"/>
+                                    <tabBarItem image="Profile" id="mih-zp-kOR"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="t7g-Wo-qct" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="40" id="0wT-U4-grn"/>
                             <constraint firstItem="ltj-0N-8sN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="8O8-A3-HRF"/>
-                            <constraint firstAttribute="trailing" secondItem="nZo-5X-MZl" secondAttribute="trailing" constant="33" id="9n8-xo-l93"/>
-                            <constraint firstItem="HRF-pl-7zG" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="10" id="ADC-5N-yfy"/>
-                            <constraint firstItem="X40-Yl-Hyp" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="H6G-Hr-Vh0"/>
-                            <constraint firstItem="nZo-5X-MZl" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="40" id="lhy-fd-xT8"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ph0-eR-nKl" secondAttribute="trailing" constant="33" id="8ti-3t-Ju5"/>
+                            <constraint firstItem="ejq-qP-rDL" firstAttribute="top" secondItem="t7g-Wo-qct" secondAttribute="bottom" constant="50" id="Iha-DB-kfI"/>
+                            <constraint firstAttribute="bottom" secondItem="oQW-sb-cs5" secondAttribute="bottom" id="Iok-0c-P0A"/>
+                            <constraint firstItem="kH7-g8-AA0" firstAttribute="centerY" secondItem="t7g-Wo-qct" secondAttribute="centerY" id="WEq-4R-QkG"/>
+                            <constraint firstItem="ejq-qP-rDL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="YpY-7P-oqq"/>
+                            <constraint firstItem="oQW-sb-cs5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dG1-9M-Kl7"/>
+                            <constraint firstItem="t7g-Wo-qct" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="daV-6H-FN3"/>
+                            <constraint firstItem="DUd-yA-p19" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="dle-1M-bU9"/>
+                            <constraint firstItem="DUd-yA-p19" firstAttribute="top" secondItem="ejq-qP-rDL" secondAttribute="bottom" constant="40" id="giT-S5-yEj"/>
+                            <constraint firstItem="Ph0-eR-nKl" firstAttribute="centerY" secondItem="DUd-yA-p19" secondAttribute="centerY" id="gwd-Um-3mF"/>
+                            <constraint firstItem="oQW-sb-cs5" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="leP-Yw-OQ7"/>
                             <constraint firstItem="ltj-0N-8sN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="46" id="seG-GL-ShM"/>
-                            <constraint firstItem="X40-Yl-Hyp" firstAttribute="top" secondItem="ltj-0N-8sN" secondAttribute="bottom" constant="40" id="vo7-Rv-Dlm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="kH7-g8-AA0" secondAttribute="trailing" constant="33" id="tLa-o5-3qA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="GoToAskX_ZBtn" destination="DUd-yA-p19" id="oTa-f0-mPu"/>
+                        <outlet property="GoToAskZ_XBtn" destination="Ph0-eR-nKl" id="pP0-6i-cdo"/>
+                        <outlet property="GoToGroupXBtn" destination="kH7-g8-AA0" id="bcR-VV-zVk"/>
+                        <outlet property="GoToGroupZBtn" destination="t7g-Wo-qct" id="jw9-01-JeX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="61" y="337"/>
+            <point key="canvasLocation" x="60.869565217391312" y="336.83035714285711"/>
         </scene>
         <!--GroupX View Controller-->
         <scene sceneID="2wa-eV-dL3">
@@ -149,7 +130,7 @@
         <!--GroupZ View Controller-->
         <scene sceneID="Ncy-oM-3G8">
             <objects>
-                <viewController storyboardIdentifier="GroupZVC" modalPresentationStyle="fullScreen" id="2J9-MV-lWm" customClass="GroupZViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupZVC" modalPresentationStyle="fullScreen" id="2J9-MV-lWm" customClass="GroupZViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S25-Zi-Xot">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,7 +175,7 @@
         <!--Write Post View Controller-->
         <scene sceneID="glN-s3-VEL">
             <objects>
-                <viewController storyboardIdentifier="ZWritePostVC" modalPresentationStyle="fullScreen" id="wlY-6i-iGb" customClass="ZWritePostViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZWritePostVC" modalPresentationStyle="fullScreen" id="wlY-6i-iGb" customClass="ZWritePostViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qds-bw-ufT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -209,7 +190,7 @@
         <!--Write Post View Controller-->
         <scene sceneID="TO2-RW-4sP">
             <objects>
-                <viewController storyboardIdentifier="XWritePostVC" modalPresentationStyle="fullScreen" id="rMZ-8r-SLX" customClass="XWritePostViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWritePostVC" modalPresentationStyle="fullScreen" id="rMZ-8r-SLX" customClass="XWritePostViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vr-6c-Q2A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -221,10 +202,45 @@
             </objects>
             <point key="canvasLocation" x="2077" y="-60"/>
         </scene>
+        <!--Ask View Controller-->
+        <scene sceneID="nlW-Rp-4hI">
+            <objects>
+                <viewController storyboardIdentifier="XAskVC" modalPresentationStyle="fullScreen" id="vs5-Vo-8qg" customClass="XAskViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJm-bl-IHl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eha-i9-Mvw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="on5-NR-L3v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="1416"/>
+        </scene>
+        <!--Ask View Controller-->
+        <scene sceneID="WwM-e3-CJM">
+            <objects>
+                <viewController storyboardIdentifier="ZAskVC" modalPresentationStyle="fullScreen" id="k8I-er-c4a" customClass="ZAskViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AUH-PF-cWs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MY1-tj-d83"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTK-pW-5pB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2077" y="658"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="UnionBrown" width="140" height="165"/>
-        <image name="UnionYellow" width="140" height="165"/>
+        <image name="Community" width="25" height="28"/>
+        <image name="GoToAskX_ZBtn" width="143" height="168"/>
+        <image name="GoToAskZ_XBtn" width="140" height="165"/>
+        <image name="GroupXBtn" width="140" height="165"/>
+        <image name="GroupZBtn" width="140" height="168"/>
+        <image name="Home" width="33" height="26"/>
+        <image name="Profile" width="27" height="26"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

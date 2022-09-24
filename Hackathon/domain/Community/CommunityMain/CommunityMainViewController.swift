@@ -8,7 +8,14 @@
 import UIKit
 
 class CommunityMainViewController: UIViewController {
+    
 
+    @IBOutlet weak var GoToGroupZBtn: UIButton!
+    @IBOutlet weak var GoToGroupXBtn: UIButton!
+    
+    @IBOutlet weak var GoToAskX_ZBtn: UIButton!
+    @IBOutlet weak var GoToAskZ_XBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
