@@ -26,12 +26,6 @@ class FightTableViewCell: UITableViewCell{
         $0.backgroundColor = .white
     }
     
-    lazy var crownBtn = UIButton().then{
-        $0.titleLabel?.font = UIFont.notosans(size: 15, family: .Bold)
-        $0.setTitleColor(UIColor(red: 106/255, green: 106/255, blue: 106/255, alpha: 1), for: .normal)
-        $0.setTitle("🏆 명예 히스토리", for: .normal)
-    }
-    
     let titleLabel = UILabel().then{
         $0.text = "누가 더 라떼인가"
         $0.font = UIFont.notosans(size: 28, family: .Bold)
@@ -72,7 +66,6 @@ class FightTableViewCell: UITableViewCell{
         
         self.contentView.addSubview(baseView)
         
-        baseView.addSubview(crownBtn)
         baseView.addSubview(titleLabel)
         baseView.addSubview(topChoiceBtn)
         baseView.addSubview(versusLabel)
@@ -85,16 +78,9 @@ class FightTableViewCell: UITableViewCell{
         baseView.snp.makeConstraints{
             $0.top.bottom.leading.trailing.equalToSuperview()
         }
-        
-        crownBtn.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(33)
-            $0.trailing.equalToSuperview().offset(-12)
-            $0.width.equalTo(120)
-            $0.height.equalTo(26)
-        }
+
         
         titleLabel.snp.makeConstraints{
-            $0.top.equalTo(crownBtn).offset(34)
             $0.leading.equalToSuperview().offset(36)
         }
         
