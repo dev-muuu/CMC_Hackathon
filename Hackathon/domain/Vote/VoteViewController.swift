@@ -12,6 +12,12 @@ class VoteViewController: UIViewController {
     let mainView = VoteView()
     
     var chatData: [Int] = [1,2,3,4,5] //default = []
+    
+    var didVote = false{
+        didSet{
+            mainView.tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         
@@ -42,6 +48,8 @@ extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.row{
         case 0:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FightTableViewCell.cellIdentifier, for: indexPath) as? FightTableViewCell else { fatalError() }
+            cell.superViewController = self
+            didVote ? cell.willShowPercentageView() : cell.willShowVersusView()
             return cell
             
         case 1:

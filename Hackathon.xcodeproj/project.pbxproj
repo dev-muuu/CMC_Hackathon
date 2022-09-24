@@ -10,6 +10,7 @@
 		072C533B28DF41E200FB2049 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */; };
 		072C533C28DF41E200FB2049 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */; };
 		074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FFC7828DF47060050D332 /* DetailPostView.swift */; };
+		074FFC7B28DF4DC10050D332 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */; };
 		0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */; };
 		0765138D28DF2BE700BCB0BD /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */; };
 		0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138E28DF2BF300BCB0BD /* DetailPostViewController.swift */; };
@@ -35,8 +36,8 @@
 		57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7628DEF1E100AC24B2 /* VoteZtabViewController.swift */; };
 		57E75E7928DEF1EC00AC24B2 /* VoteXtabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7828DEF1EC00AC24B2 /* VoteXtabViewController.swift */; };
 		57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7C28DEF21400AC24B2 /* VoteView.swift */; };
-		57E75E7F28DEF22000AC24B2 /* VoteZtabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7E28DEF22000AC24B2 /* VoteZtabView.swift */; };
-		57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8028DEF22B00AC24B2 /* VoteXtabView.swift */; };
+		57E75E7F28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7E28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift */; };
+		57E75E8128DEF22B00AC24B2 /* VoteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8028DEF22B00AC24B2 /* VoteCollectionViewCell.swift */; };
 		57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */; };
 		57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8E28DF3C1100AC24B2 /* UIFont.swift */; };
 		57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */; };
@@ -73,6 +74,7 @@
 		072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
 		074FFC7828DF47060050D332 /* DetailPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostView.swift; sourceTree = "<group>"; };
+		074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostTableViewCell.swift; sourceTree = "<group>"; };
 		0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		0765138E28DF2BF300BCB0BD /* DetailPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +104,8 @@
 		57E75E7628DEF1E100AC24B2 /* VoteZtabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteZtabViewController.swift; sourceTree = "<group>"; };
 		57E75E7828DEF1EC00AC24B2 /* VoteXtabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteXtabViewController.swift; sourceTree = "<group>"; };
 		57E75E7C28DEF21400AC24B2 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
-		57E75E7E28DEF22000AC24B2 /* VoteZtabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteZtabView.swift; sourceTree = "<group>"; };
-		57E75E8028DEF22B00AC24B2 /* VoteXtabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteXtabView.swift; sourceTree = "<group>"; };
+		57E75E7E28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		57E75E8028DEF22B00AC24B2 /* VoteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteCollectionViewCell.swift; sourceTree = "<group>"; };
 		57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		57E75E8E28DF3C1100AC24B2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTableViewCell.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		0765138928DF2BC900BCB0BD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */,
 				0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */,
 				0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */,
 			);
@@ -296,8 +299,6 @@
 			isa = PBXGroup;
 			children = (
 				57E75E7C28DEF21400AC24B2 /* VoteView.swift */,
-				57E75E7E28DEF22000AC24B2 /* VoteZtabView.swift */,
-				57E75E8028DEF22B00AC24B2 /* VoteXtabView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -308,6 +309,8 @@
 				57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */,
 				57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */,
 				57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */,
+				57E75E7E28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift */,
+				57E75E8028DEF22B00AC24B2 /* VoteCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -661,13 +664,14 @@
 				8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */,
 				57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */,
 				074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */,
-				57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */,
+				074FFC7B28DF4DC10050D332 /* UserTableViewCell.swift in Sources */,
+				57E75E8128DEF22B00AC24B2 /* VoteCollectionViewCell.swift in Sources */,
 				0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */,
 				8AD1BAD328DF661E00260E5E /* XWritePostViewController.swift in Sources */,
 				57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */,
 				473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */,
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,
-				57E75E7F28DEF22000AC24B2 /* VoteZtabView.swift in Sources */,
+				57E75E7F28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift in Sources */,
 				8AD1BAD728DF663900260E5E /* ZWritePostViewController.swift in Sources */,
 				8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */,
 			);
