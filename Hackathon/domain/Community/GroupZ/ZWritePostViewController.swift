@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PostByZViewController: UIViewController {
+class ZWritePostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -72,7 +72,6 @@
 		1401094316DA740DB46498CD /* Pods_HackathonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackathonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		473A917628DF2F0D0050D389 /* kakaoLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kakaoLoginPage.swift; sourceTree = "<group>"; };
 		473A917828DF2F260050D389 /* loginDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginDetail.swift; sourceTree = "<group>"; };
-		473A917A28DF31C10050D389 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		55B8449772D510CD207CA8CC /* Pods_Hackathon_HackathonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon_HackathonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E75E3628DEE1F100AC24B2 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		57E75E3928DEE1F100AC24B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,7 +224,6 @@
 				57E75E4228DEE20000AC24B2 /* Assets.xcassets */,
 				57E75E4428DEE20000AC24B2 /* LaunchScreen.storyboard */,
 				57E75E4728DEE20000AC24B2 /* Info.plist */,
-				473A917A28DF31C10050D389 /* Config.xcconfig */,
 			);
 			path = Hackathon;
 			sourceTree = "<group>";
@@ -640,7 +638,6 @@
 /* Begin XCBuildConfiguration section */
 		57E75E5E28DEE20100AC24B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 473A917A28DF31C10050D389 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -702,7 +699,6 @@
 		};
 		57E75E5F28DEE20100AC24B2 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 473A917A28DF31C10050D389 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;

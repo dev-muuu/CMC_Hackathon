@@ -8,25 +8,115 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Community Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CommunityMainVC" modalPresentationStyle="fullScreen" id="Y6W-OH-hqX" customClass="CommunityMainViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-qP-rDL">
+                                <rect key="frame" x="83" y="283" width="202" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="서로에게 물어요">
+                                        <attributes>
+                                            <font key="NSFont" size="30" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HRF-pl-7zG">
+                                <rect key="frame" x="92" y="392" width="117" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="노란싹수 모임">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJr-Uf-E1W">
+                                <rect key="frame" x="237" y="392" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="라떼 모임">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mDg-sD-60D">
+                                <rect key="frame" x="109" y="434" width="108" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="To. 노란싹수">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieA-pH-zEC">
+                                <rect key="frame" x="263" y="430" width="71" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="To. ">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="라떼">
+                                        <attributes>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltj-0N-8sN">
+                                <rect key="frame" x="33" y="90" width="111" height="45"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="우리끼리">
+                                        <attributes>
+                                            <font key="NSFont" size="30" name="NotoSansKR-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ltj-0N-8sN" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="33" id="8O8-A3-HRF"/>
+                            <constraint firstItem="ltj-0N-8sN" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="46" id="seG-GL-ShM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="35" y="98"/>
+            <point key="canvasLocation" x="61" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--GroupX View Controller-->
         <scene sceneID="2wa-eV-dL3">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="h2X-xK-2t0" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupXVC" modalPresentationStyle="fullScreen" id="h2X-xK-2t0" customClass="GroupXViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0QN-zl-HkV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,12 +126,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dts-79-iok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="-783"/>
+            <point key="canvasLocation" x="1174" y="-60"/>
         </scene>
-        <!--View Controller-->
+        <!--GroupZ View Controller-->
         <scene sceneID="Ncy-oM-3G8">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="2J9-MV-lWm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GroupZVC" modalPresentationStyle="fullScreen" id="2J9-MV-lWm" customClass="GroupZViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S25-Zi-Xot">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -51,12 +141,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8ij-PQ-os0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1174" y="-59"/>
+            <point key="canvasLocation" x="1174" y="-783"/>
         </scene>
-        <!--View Controller-->
+        <!--ToX View Controller-->
         <scene sceneID="aHl-CR-oAk">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="pko-t6-lMB" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ToXVC" modalPresentationStyle="fullScreen" id="pko-t6-lMB" customClass="ToXViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XhO-4j-pJR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -68,10 +158,10 @@
             </objects>
             <point key="canvasLocation" x="1174" y="658"/>
         </scene>
-        <!--View Controller-->
+        <!--ToZ View Controller-->
         <scene sceneID="cc1-LM-gYx">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="W1A-Gt-lfZ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ToZVC" modalPresentationStyle="fullScreen" id="W1A-Gt-lfZ" customClass="ToZViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WlK-Qj-3q9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="1174" y="1416"/>
         </scene>
-        <!--View Controller-->
+        <!--Write Post View Controller-->
         <scene sceneID="glN-s3-VEL">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wlY-6i-iGb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZWritePostVC" modalPresentationStyle="fullScreen" id="wlY-6i-iGb" customClass="ZWritePostViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qds-bw-ufT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,10 +188,10 @@
             </objects>
             <point key="canvasLocation" x="2077" y="-783"/>
         </scene>
-        <!--View Controller-->
+        <!--Write Post View Controller-->
         <scene sceneID="TO2-RW-4sP">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="rMZ-8r-SLX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XWritePostVC" modalPresentationStyle="fullScreen" id="rMZ-8r-SLX" customClass="XWritePostViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8vr-6c-Q2A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,36 +202,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Itp-Yx-rZh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2077" y="-60"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="xCP-7D-uZ0">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="aNv-JP-sVL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="PHp-wD-Gia">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="GpT-Bt-qGd"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="THB-p0-WXy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2077" y="1416"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Ka0-aP-u3Y">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Z0R-T0-wog" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ELK-DB-z3D">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="rFN-T8-xcM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yjb-IO-gZL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2077" y="658"/>
         </scene>
     </scenes>
     <resources>
