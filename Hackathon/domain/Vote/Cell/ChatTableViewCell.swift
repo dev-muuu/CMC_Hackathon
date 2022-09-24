@@ -35,6 +35,108 @@ extension UIFont{
 
 class FightTableViewCell: UITableViewCell{
     
+    //MARK: - Properties
+    
+    static let cellIdentifier = "FightTableViewCell"
+    
+    //MARK: - UI
+    
+    let baseView = UIView().then{
+        $0.backgroundColor = .white
+    }
+    
+    lazy var crownBtn = UIButton().then{
+        $0.titleLabel?.font = UIFont.pretendard(size: 15, family: .Bold)
+        $0.setTitleColor(UIColor(red: 106/255, green: 106/255, blue: 106/255, alpha: 1), for: .normal)
+        $0.setTitle("🏆 명예 히스토리", for: .normal)
+    }
+    
+    let titleLabel = UILabel().then{
+        $0.text = "누가 더 라떼인가"
+        $0.font = UIFont.pretendard(size: 30, family: .Bold)
+    }
+    
+    lazy var topChoiceBtn = UIButton().then{
+        $0.backgroundColor = .yellow
+        $0.layer.cornerRadius = 16
+    }
+    
+    lazy var bottomChoiceBtn = UIButton().then{
+        $0.backgroundColor = .yellow
+        $0.layer.cornerRadius = 16
+    }
+    
+    let versusLabel = UILabel().then{
+        $0.text = "VS"
+        $0.font = UIFont.pretendard(size: 67, family: .Regular)
+    }
+    
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setUpView()
+        setUpConstraint()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setUpView(){
+        
+        self.contentView.addSubview(baseView)
+        
+        baseView.addSubview(crownBtn)
+        baseView.addSubview(titleLabel)
+        baseView.addSubview(topChoiceBtn)
+        baseView.addSubview(versusLabel)
+        baseView.addSubview(bottomChoiceBtn)
+        
+    }
+    
+    func setUpConstraint(){
+        
+        baseView.snp.makeConstraints{
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
+        crownBtn.snp.makeConstraints{
+            $0.top.equalToSuperview().offset(33)
+            $0.trailing.equalToSuperview().offset(-12)
+            $0.width.equalTo(120)
+            $0.height.equalTo(26)
+        }
+        
+        titleLabel.snp.makeConstraints{
+            $0.top.equalTo(crownBtn).offset(34)
+            $0.leading.equalToSuperview().offset(36)
+        }
+        
+        topChoiceBtn.snp.makeConstraints{
+            $0.top.equalTo(titleLabel.snp.bottom).offset(34)
+            $0.leading.equalToSuperview().offset(36)
+            $0.trailing.equalToSuperview().offset(-32)
+            $0.height.equalTo(148)
+        }
+        
+        versusLabel.snp.makeConstraints{
+            $0.top.equalTo(topChoiceBtn.snp.bottom).offset(7)
+            $0.height.equalTo(82)
+            $0.centerX.equalToSuperview()
+        }
+        
+        bottomChoiceBtn.snp.makeConstraints{
+            $0.top.equalTo(versusLabel.snp.bottom).offset(17)
+            $0.leading.equalToSuperview().offset(36)
+            $0.trailing.equalToSuperview().offset(-32)
+            $0.height.equalTo(148)
+            $0.bottom.equalToSuperview()
+        }
+        
+        
+        
+        
+    }
 }
 
 class ChatTableViewCell: UITableViewCell {
@@ -71,6 +173,9 @@ class ChatTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        setUpView()
+        setUpConstraint()
     }
     
     required init?(coder: NSCoder) {
@@ -98,26 +203,29 @@ class ChatTableViewCell: UITableViewCell {
         profileImage.snp.makeConstraints{
             $0.width.equalTo(47.71)
             $0.height.equalTo(45.58)
-            $0.top.equalToSuperview().offset(7)
+            $0.top.equalToSuperview().offset(15)
             $0.leading.equalToSuperview().offset(25)
         }
         
         nicknameLabel.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(7)
+            $0.top.equalToSuperview().offset(15)
             $0.leading.equalTo(profileImage.snp.trailing).offset(16.29)
         }
         
         timeLabel.snp.makeConstraints{
             $0.top.equalTo(nicknameLabel.snp.bottom).offset(5.97)
-            $0.leading.equalTo(profileImage).offset(16.35)
+            $0.leading.equalTo(profileImage.snp.trailing).offset(16.35)
         }
         
         messageLabel.snp.makeConstraints{
             $0.top.equalTo(timeLabel.snp.bottom).offset(12)
+            $0.leading.equalTo(nicknameLabel)
             $0.trailing.equalToSuperview().offset(-20)
+            $0.bottom.equalToSuperview().offset(-30)
         }
         
         borderLine.snp.makeConstraints{
+            $0.height.equalTo(1)
             $0.bottom.leading.trailing.equalToSuperview()
         }
     }
@@ -132,10 +240,12 @@ class ChatTitleViewCell: UITableViewCell{
     
     var chatCount: Int = 0{
         didSet{
-            chatCountLabel.text = "댓글 \(self.chatCountLabel)개"
+            chatCountLabel.text = "댓글 \(self.chatCount)개"
         }
     }
     //MARK: - UI
+    
+    let baseView = UIView()
     
     let chatCountLabel = UILabel().then{
         $0.font = UIFont.pretendard(size: 16, family: .Medium)
@@ -157,13 +267,20 @@ class ChatTitleViewCell: UITableViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
     func setUpView(){
-//        self.baseView
+        
+        self.contentView.addSubview(baseView)
+        
+        baseView.addSubview(chatCountLabel)
+        baseView.addSubview(borderLine)
     }
     
     func setUpConstraint(){
+        
+        baseView.snp.makeConstraints{
+            $0.top.bottom.leading.trailing.equalToSuperview()
+        }
+        
         chatCountLabel.snp.makeConstraints{
             $0.top.equalToSuperview().offset(100)
             $0.leading.equalToSuperview().offset(33)
@@ -171,6 +288,7 @@ class ChatTitleViewCell: UITableViewCell{
         }
         
         borderLine.snp.makeConstraints{
+            $0.height.equalTo(1)
             $0.leading.trailing.bottom.equalToSuperview()
         }
     }
