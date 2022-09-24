@@ -24,8 +24,8 @@ final class UserTableViewCell: UITableViewCell {
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .black
-        imageView.image = UIImage()
-        imageView.layer.cornerRadius = CGFloat(25)
+        imageView.image = UIImage(named: "ZLogoSmall")
+        imageView.layer.cornerRadius = CGFloat(27.5)
         imageView.clipsToBounds = true
 
         
@@ -36,8 +36,8 @@ final class UserTableViewCell: UITableViewCell {
         let name = UILabel()
         
         name.textColor = .label
-        name.font = .systemFont(ofSize: 20.0, weight: .light)
-        name.text = "사용자명"
+        name.font = UIFont.notosans(size: 17, family: .Bold)
+        name.text = "노란싹수대장"
         
         return name
     }()
@@ -72,8 +72,8 @@ final class UserTableViewCell: UITableViewCell {
         }
         
         userImage.snp.makeConstraints{
-            $0.width.equalTo(47.71)
-            $0.height.equalTo(45.58)
+            $0.height.equalTo(55)
+            $0.width.equalTo(55)
             $0.top.equalToSuperview().offset(50)
             $0.leading.equalToSuperview().offset(25)
         }

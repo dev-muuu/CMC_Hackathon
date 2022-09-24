@@ -160,9 +160,9 @@
 		0765138928DF2BC900BCB0BD /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */,
 				0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */,
 				0765138C28DF2BE700BCB0BD /* CommentTableViewCell.swift */,
-				074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";

@@ -11,6 +11,13 @@ import SnapKit
 import Then
 
 class DetailPostViewController: UIViewController {
+    
+    // MARK: - Init
+    
+    convenience init() {
+        self.init()
+        self.navigationItem.title = "노란싹수 모임"
+    }
 
     // MARK: - Property
     
@@ -55,6 +62,12 @@ extension DetailPostViewController: UITableViewDelegate, UITableViewDataSource{
         case 1:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: DetailPostTableViewCell.cellIdentifier, for: indexPath) as? DetailPostTableViewCell else { fatalError() }
             return cell
+            
+//        case 2:
+//            guard let cell = tableView.dequeueReusableCell(withIdentifier: ChatTitleViewCell.cellIdentifier, for: indexPath) as? ChatTitleViewCell else { fatalError() }
+//            cell.chatCount = self.chatData.count
+//            return cell
+            
         default:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.cellIdentifier, for: indexPath) as? CommentTableViewCell else { fatalError() }
             return cell
