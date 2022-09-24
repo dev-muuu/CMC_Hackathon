@@ -42,7 +42,15 @@
 		57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8E28DF3C1100AC24B2 /* UIFont.swift */; };
 		57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */; };
 		57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */; };
-		8ADF375328DEFC6000EA6C14 /* Community in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF375228DEFC6000EA6C14 /* Community */; };
+		8AD1BABF28DF641A00260E5E /* CommunityMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BABE28DF641A00260E5E /* CommunityMainViewController.swift */; };
+		8AD1BAC328DF64FE00260E5E /* ToXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC228DF64FE00260E5E /* ToXViewController.swift */; };
+		8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC428DF651E00260E5E /* ToZViewController.swift */; };
+		8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC728DF657B00260E5E /* XAskViewController.swift */; };
+		8AD1BACA28DF658B00260E5E /* YAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAC928DF658B00260E5E /* YAskViewController.swift */; };
+		8AD1BAD128DF660F00260E5E /* GroupXViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAD028DF660F00260E5E /* GroupXViewController.swift */; };
+		8AD1BAD328DF661E00260E5E /* XWritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAD228DF661E00260E5E /* XWritePostViewController.swift */; };
+		8AD1BAD528DF662C00260E5E /* GroupZViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAD428DF662C00260E5E /* GroupZViewController.swift */; };
+		8AD1BAD728DF663900260E5E /* ZWritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD1BAD628DF663900260E5E /* ZWritePostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +113,15 @@
 		5B58B63550D28EF472FBB196 /* Pods-Hackathon-HackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
-		8ADF375228DEFC6000EA6C14 /* Community */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Community; sourceTree = "<group>"; };
+		8AD1BABE28DF641A00260E5E /* CommunityMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainViewController.swift; sourceTree = "<group>"; };
+		8AD1BAC228DF64FE00260E5E /* ToXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToXViewController.swift; sourceTree = "<group>"; };
+		8AD1BAC428DF651E00260E5E /* ToZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToZViewController.swift; sourceTree = "<group>"; };
+		8AD1BAC728DF657B00260E5E /* XAskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XAskViewController.swift; sourceTree = "<group>"; };
+		8AD1BAC928DF658B00260E5E /* YAskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YAskViewController.swift; sourceTree = "<group>"; };
+		8AD1BAD028DF660F00260E5E /* GroupXViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupXViewController.swift; sourceTree = "<group>"; };
+		8AD1BAD228DF661E00260E5E /* XWritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XWritePostViewController.swift; sourceTree = "<group>"; };
+		8AD1BAD428DF662C00260E5E /* GroupZViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupZViewController.swift; sourceTree = "<group>"; };
+		8AD1BAD628DF663900260E5E /* ZWritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWritePostViewController.swift; sourceTree = "<group>"; };
 		A931D615A03708FF4138BBE1 /* Pods-HackathonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonTests.debug.xcconfig"; path = "Target Support Files/Pods-HackathonTests/Pods-HackathonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3A7E4A0D5827ED5D80DD091 /* Pods-Hackathon-HackathonUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.release.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4CD9783947AE581F25A37BB /* Pods-HackathonTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackathonTests.release.xcconfig"; path = "Target Support Files/Pods-HackathonTests/Pods-HackathonTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,7 +277,7 @@
 			children = (
 				473A917328DF2E8F0050D389 /* login */,
 				0765138828DF2BC200BCB0BD /* detailPost */,
-				8ADF375228DEFC6000EA6C14 /* Community */,
+				8AD1BAC128DF64CC00260E5E /* Community */,
 				57E75E7328DEF19600AC24B2 /* Vote */,
 			);
 			path = domain;
@@ -307,6 +323,71 @@
 				57E75E8E28DF3C1100AC24B2 /* UIFont.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		8AD1BAC028DF64AC00260E5E /* CommunityMain */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BABE28DF641A00260E5E /* CommunityMainViewController.swift */,
+			);
+			path = CommunityMain;
+			sourceTree = "<group>";
+		};
+		8AD1BAC128DF64CC00260E5E /* Community */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BAD828DF663F00260E5E /* GroupX */,
+				8AD1BACC28DF659D00260E5E /* GroupZ */,
+				8AD1BAC628DF652900260E5E /* Ask */,
+				8AD1BAC028DF64AC00260E5E /* CommunityMain */,
+			);
+			path = Community;
+			sourceTree = "<group>";
+		};
+		8AD1BAC628DF652900260E5E /* Ask */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BACE28DF65CC00260E5E /* ForZ */,
+				8AD1BACD28DF65C100260E5E /* ForX */,
+			);
+			path = Ask;
+			sourceTree = "<group>";
+		};
+		8AD1BACC28DF659D00260E5E /* GroupZ */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BAD628DF663900260E5E /* ZWritePostViewController.swift */,
+				8AD1BAD428DF662C00260E5E /* GroupZViewController.swift */,
+			);
+			path = GroupZ;
+			sourceTree = "<group>";
+		};
+		8AD1BACD28DF65C100260E5E /* ForX */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BAC428DF651E00260E5E /* ToZViewController.swift */,
+				8AD1BAC728DF657B00260E5E /* XAskViewController.swift */,
+			);
+			path = ForX;
+			sourceTree = "<group>";
+		};
+		8AD1BACE28DF65CC00260E5E /* ForZ */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BAC228DF64FE00260E5E /* ToXViewController.swift */,
+				8AD1BAC928DF658B00260E5E /* YAskViewController.swift */,
+			);
+			path = ForZ;
+			sourceTree = "<group>";
+		};
+		8AD1BAD828DF663F00260E5E /* GroupX */ = {
+			isa = PBXGroup;
+			children = (
+				8AD1BAD028DF660F00260E5E /* GroupXViewController.swift */,
+				8AD1BAD228DF661E00260E5E /* XWritePostViewController.swift */,
+			);
+			name = GroupX;
+			path = GroupZ/GroupX;
 			sourceTree = "<group>";
 		};
 		A92A67C23779793F5991AEAD /* Frameworks */ = {
@@ -434,7 +515,6 @@
 				57E75E4328DEE20000AC24B2 /* Assets.xcassets in Resources */,
 				57E75E6C28DEE3A100AC24B2 /* SSOOYA.storyboard in Resources */,
 				57E75E4128DEE1F100AC24B2 /* Main.storyboard in Resources */,
-				8ADF375328DEFC6000EA6C14 /* Community in Resources */,
 				072C533B28DF41E200FB2049 /* NotoSansKR-Medium.otf in Resources */,
 				072C533C28DF41E200FB2049 /* NotoSansKR-Bold.otf in Resources */,
 				57E75E7228DEE3D600AC24B2 /* RIA.storyboard in Resources */,
@@ -568,23 +648,32 @@
 				57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */,
 				57E75E7528DEF1CD00AC24B2 /* VoteViewController.swift in Sources */,
 				0765138D28DF2BE700BCB0BD /* CommentTableViewCell.swift in Sources */,
+				8AD1BAD528DF662C00260E5E /* GroupZViewController.swift in Sources */,
+				8AD1BABF28DF641A00260E5E /* CommunityMainViewController.swift in Sources */,
 				0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */,
 				57E75E7928DEF1EC00AC24B2 /* VoteXtabViewController.swift in Sources */,
+				8AD1BAC328DF64FE00260E5E /* ToXViewController.swift in Sources */,
 				57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */,
 				57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */,
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
+				8AD1BACA28DF658B00260E5E /* YAskViewController.swift in Sources */,
 				57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */,
 				57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */,
+				8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */,
+				8AD1BAD128DF660F00260E5E /* GroupXViewController.swift in Sources */,
 				473A917928DF2F260050D389 /* loginDetail.swift in Sources */,
+				8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */,
 				57E75E7728DEF1E100AC24B2 /* VoteZtabViewController.swift in Sources */,
 				074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */,
 				074FFC7B28DF4DC10050D332 /* UserTableViewCell.swift in Sources */,
 				57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */,
 				0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */,
+				8AD1BAD328DF661E00260E5E /* XWritePostViewController.swift in Sources */,
 				57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */,
 				473A917728DF2F0D0050D389 /* kakaoLoginPage.swift in Sources */,
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,
 				57E75E7F28DEF22000AC24B2 /* VoteZtabView.swift in Sources */,
+				8AD1BAD728DF663900260E5E /* ZWritePostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

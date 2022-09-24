@@ -1,5 +1,5 @@
 //
-//  ZWritePostViewController.swift
+//  XWritePostViewController.swift
 //  Hackathon
 //
 //  Created by 김사랑 on 2022/09/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZWritePostViewController: UIViewController {
+class XWritePostViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

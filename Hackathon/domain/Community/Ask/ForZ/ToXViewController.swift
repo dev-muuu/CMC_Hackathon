@@ -1,5 +1,5 @@
 //
-//  ZWritePostViewController.swift
+//  ToXViewController.swift
 //  Hackathon
 //
 //  Created by 김사랑 on 2022/09/25.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ZWritePostViewController: UIViewController {
+class ToXViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
