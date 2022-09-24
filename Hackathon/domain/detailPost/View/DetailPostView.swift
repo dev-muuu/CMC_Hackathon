@@ -12,11 +12,10 @@ class DetailPostView: UIView {
     
     let tableView = UITableView().then{
         $0.showsVerticalScrollIndicator = false
-        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
+//        $0.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 100, right: 0)
         
         $0.register(UserTableViewCell.self, forCellReuseIdentifier: UserTableViewCell.cellIdentifier)
         $0.register(DetailPostTableViewCell.self, forCellReuseIdentifier: DetailPostTableViewCell.cellIdentifier)
-//        $0.register(ChatTitleViewCell.self, forCellReuseIdentifier: DetailPostTableViewCell.cellIdentifier)
         $0.register(CommentTableViewCell.self, forCellReuseIdentifier: CommentTableViewCell.cellIdentifier)
     }
 
@@ -26,7 +25,8 @@ class DetailPostView: UIView {
         self.addSubview(tableView)
         
         tableView.snp.makeConstraints{
-            $0.top.bottom.leading.trailing.equalToSuperview()
+            $0.bottom.leading.trailing.equalToSuperview()
+            $0.top.equalToSuperview().offset(60)
         }
     }
     

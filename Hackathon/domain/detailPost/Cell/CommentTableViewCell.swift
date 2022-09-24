@@ -22,7 +22,6 @@ final class CommentTableViewCell: UITableViewCell {
     
     private lazy var userImage: UIImageView = {
         let imageView = UIImageView()
-        imageView.backgroundColor = .black
         imageView.image = UIImage(named: "ZLogoSmall")
         imageView.layer.cornerRadius = CGFloat(27.5)
         imageView.clipsToBounds = true
@@ -92,8 +91,13 @@ final class CommentTableViewCell: UITableViewCell {
     }
     
     func setUpConstraint() {
+//        contentView.snp.makeConstraints {
+//            $0.top.equalToSuperview().offset(40)
+//        }
+        
         baseView.snp.makeConstraints{
             $0.top.bottom.leading.trailing.equalToSuperview()
+           
         }
         userImage.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(25)
