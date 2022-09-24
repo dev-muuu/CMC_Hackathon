@@ -38,8 +38,9 @@
 		57E75E7F28DEF22000AC24B2 /* VoteZtabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E7E28DEF22000AC24B2 /* VoteZtabView.swift */; };
 		57E75E8128DEF22B00AC24B2 /* VoteXtabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8028DEF22B00AC24B2 /* VoteXtabView.swift */; };
 		57E75E8328DEF24100AC24B2 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */; };
-		57E75E8528DEF25800AC24B2 /* CrownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8428DEF25800AC24B2 /* CrownViewController.swift */; };
 		57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E8E28DF3C1100AC24B2 /* UIFont.swift */; };
+		57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */; };
+		57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */; };
 		8ADF375328DEFC6000EA6C14 /* Community in Resources */ = {isa = PBXBuildFile; fileRef = 8ADF375228DEFC6000EA6C14 /* Community */; };
 /* End PBXBuildFile section */
 
@@ -96,8 +97,9 @@
 		57E75E7E28DEF22000AC24B2 /* VoteZtabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteZtabView.swift; sourceTree = "<group>"; };
 		57E75E8028DEF22B00AC24B2 /* VoteXtabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteXtabView.swift; sourceTree = "<group>"; };
 		57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
-		57E75E8428DEF25800AC24B2 /* CrownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrownViewController.swift; sourceTree = "<group>"; };
 		57E75E8E28DF3C1100AC24B2 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FightTableViewCell.swift; sourceTree = "<group>"; };
+		57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTitleViewCell.swift; sourceTree = "<group>"; };
 		5B58B63550D28EF472FBB196 /* Pods-Hackathon-HackathonUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon-HackathonUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon-HackathonUITests/Pods-Hackathon-HackathonUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		718904B84399A2A3C0D2E8E6 /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		85F22798DF52E175ED9F9AFD /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
@@ -270,7 +272,6 @@
 				57E75E7428DEF1CD00AC24B2 /* VoteViewController.swift */,
 				57E75E7628DEF1E100AC24B2 /* VoteZtabViewController.swift */,
 				57E75E7828DEF1EC00AC24B2 /* VoteXtabViewController.swift */,
-				57E75E8428DEF25800AC24B2 /* CrownViewController.swift */,
 			);
 			path = Vote;
 			sourceTree = "<group>";
@@ -289,6 +290,8 @@
 			isa = PBXGroup;
 			children = (
 				57E75E8228DEF24100AC24B2 /* ChatTableViewCell.swift */,
+				57E75E9828DF54EA00AC24B2 /* FightTableViewCell.swift */,
+				57E75E9A28DF551200AC24B2 /* ChatTitleViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -559,12 +562,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57E75E8528DEF25800AC24B2 /* CrownViewController.swift in Sources */,
 				57E75E8F28DF3C1100AC24B2 /* UIFont.swift in Sources */,
 				57E75E7528DEF1CD00AC24B2 /* VoteViewController.swift in Sources */,
 				0765138D28DF2BE700BCB0BD /* CommentTableViewCell.swift in Sources */,
 				0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */,
 				57E75E7928DEF1EC00AC24B2 /* VoteXtabViewController.swift in Sources */,
+				57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */,
+				57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */,
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
 				57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */,
 				57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */,
