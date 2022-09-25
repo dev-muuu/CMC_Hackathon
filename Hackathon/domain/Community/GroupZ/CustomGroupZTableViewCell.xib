@@ -4,22 +4,78 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomGroupZTableViewCell" rowHeight="167" id="KGk-i7-Jjw" customClass="CustomGroupZTableViewCell" customModule="Hackathon" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="364" height="167"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CustomGroupZTableViewCell" rowHeight="145" id="MxZ-Vg-Ubb" customClass="CustomGroupZTableViewCell" customModule="Hackathon" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="364" height="145"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="364" height="167"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="MxZ-Vg-Ubb" id="vvi-h4-7SL">
+                <rect key="frame" x="0.0" y="0.0" width="364" height="145"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fHU-BA-Ebu">
-                        <rect key="frame" x="20" y="9" width="324" height="32"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fdc-SQ-ci5">
+                        <rect key="frame" x="12" y="8" width="340" height="122"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeR-RM-FH7">
+                                <rect key="frame" x="246.5" y="91" width="42" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="😢">
+                                            <attributes>
+                                                <font key="NSFont" metaFont="system" size="8"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" 3">
+                                            <attributes>
+                                                <font key="NSFont" size="8" name="NotoSansKR-Medium"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="😢">
+                                            <attributes>
+                                                <font key="NSFont" size="8" name="AppleColorEmoji"/>
+                                                <font key="NSOriginalFont" metaFont="system" size="8"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" 3">
+                                            <attributes>
+                                                <font key="NSFont" size="8" name="NotoSansKR-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43분 전" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b26-Ms-uKO">
+                                <rect key="frame" x="295.5" y="97.5" width="37.5" height="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="32" id="Ffu-qy-Yp6"/>
+                            <constraint firstAttribute="trailing" secondItem="b26-Ms-uKO" secondAttribute="trailing" constant="7" id="1YQ-gL-SHY"/>
+                            <constraint firstItem="b26-Ms-uKO" firstAttribute="centerY" secondItem="xeR-RM-FH7" secondAttribute="centerY" id="Df1-P5-46m"/>
+                            <constraint firstAttribute="height" constant="122" id="WnN-Kp-hQP"/>
+                            <constraint firstAttribute="bottom" secondItem="xeR-RM-FH7" secondAttribute="bottom" constant="4" id="u0R-SB-8u1"/>
+                            <constraint firstItem="b26-Ms-uKO" firstAttribute="leading" secondItem="xeR-RM-FH7" secondAttribute="trailing" constant="7" id="u5m-mR-GJU"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFV-xE-AGu">
+                        <rect key="frame" x="32" y="17" width="300" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="YVO-js-7hT"/>
                         </constraints>
                         <attributedString key="attributedText">
                             <fragment content="10분 일찍 와서 준비하라는 과장님">
@@ -32,10 +88,10 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6X2-NY-5e4">
-                        <rect key="frame" x="20" y="42" width="324" height="58"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G3Z-m5-tVD">
+                        <rect key="frame" x="32" y="50" width="300" height="58"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="58" id="81y-88-vnh"/>
+                            <constraint firstAttribute="height" constant="58" id="R3W-Jk-hey"/>
                         </constraints>
                         <attributedString key="attributedText">
                             <fragment content="출근 1주일 차입니다. 나참, 과장님이 10분 일찍 와서 준비하라고 하시더라구요.">
@@ -48,73 +104,33 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fZe-P2-ZcE">
-                        <rect key="frame" x="272.5" y="128" width="42" height="35"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                        <state key="normal">
-                            <attributedString key="attributedTitle">
-                                <fragment content="😢">
-                                    <attributes>
-                                        <font key="NSFont" metaFont="system" size="8"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content=" 3">
-                                    <attributes>
-                                        <font key="NSFont" size="8" name="NotoSansKR-Medium"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                        </state>
-                        <buttonConfiguration key="configuration" style="plain">
-                            <attributedString key="attributedTitle">
-                                <fragment content="😢">
-                                    <attributes>
-                                        <font key="NSFont" size="8" name="AppleColorEmoji"/>
-                                        <font key="NSOriginalFont" metaFont="system" size="8"/>
-                                    </attributes>
-                                </fragment>
-                                <fragment content=" 3">
-                                    <attributes>
-                                        <font key="NSFont" size="8" name="NotoSansKR-Bold"/>
-                                    </attributes>
-                                </fragment>
-                            </attributedString>
-                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </buttonConfiguration>
-                    </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43분 전" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3U9-c6-Tx4">
-                        <rect key="frame" x="319.5" y="136.5" width="37.5" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="Lds-kO-qsh"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="fZe-P2-ZcE" secondAttribute="bottom" constant="4" id="15B-4a-btX"/>
-                    <constraint firstItem="fHU-BA-Ebu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="2uR-2e-yrA"/>
-                    <constraint firstItem="3U9-c6-Tx4" firstAttribute="centerY" secondItem="fZe-P2-ZcE" secondAttribute="centerY" id="7Yw-OB-GO0"/>
-                    <constraint firstAttribute="trailing" secondItem="3U9-c6-Tx4" secondAttribute="trailing" constant="7" id="HjF-rV-p9X"/>
-                    <constraint firstItem="6X2-NY-5e4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="M8w-QT-eto"/>
-                    <constraint firstItem="fHU-BA-Ebu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="bOH-6D-A64"/>
-                    <constraint firstItem="3U9-c6-Tx4" firstAttribute="leading" secondItem="fZe-P2-ZcE" secondAttribute="trailing" constant="5" id="bZb-ss-TTc"/>
-                    <constraint firstAttribute="trailing" secondItem="fHU-BA-Ebu" secondAttribute="trailing" constant="20" id="oEr-Zq-8Tq"/>
-                    <constraint firstAttribute="trailing" secondItem="6X2-NY-5e4" secondAttribute="trailing" constant="20" id="pgA-d3-CCu"/>
-                    <constraint firstItem="fZe-P2-ZcE" firstAttribute="top" secondItem="6X2-NY-5e4" secondAttribute="bottom" constant="28" id="q37-aw-iM7"/>
-                    <constraint firstItem="6X2-NY-5e4" firstAttribute="top" secondItem="fHU-BA-Ebu" secondAttribute="bottom" constant="1" id="qeG-XT-Vyv"/>
+                    <constraint firstItem="Fdc-SQ-ci5" firstAttribute="trailing" secondItem="G3Z-m5-tVD" secondAttribute="trailing" constant="20" id="1G5-Lg-TlV"/>
+                    <constraint firstItem="PFV-xE-AGu" firstAttribute="top" secondItem="Fdc-SQ-ci5" secondAttribute="top" constant="9" id="3Vp-h0-6aF"/>
+                    <constraint firstItem="PFV-xE-AGu" firstAttribute="leading" secondItem="Fdc-SQ-ci5" secondAttribute="leading" constant="20" id="5AZ-Jo-XWX"/>
+                    <constraint firstItem="G3Z-m5-tVD" firstAttribute="leading" secondItem="Fdc-SQ-ci5" secondAttribute="leading" constant="20" id="Owf-lf-3jH"/>
+                    <constraint firstAttribute="trailing" secondItem="Fdc-SQ-ci5" secondAttribute="trailing" constant="12" id="THE-K5-x62"/>
+                    <constraint firstItem="G3Z-m5-tVD" firstAttribute="top" secondItem="PFV-xE-AGu" secondAttribute="bottom" constant="1" id="WqD-Dd-8pq"/>
+                    <constraint firstAttribute="bottom" secondItem="Fdc-SQ-ci5" secondAttribute="bottom" constant="8" id="a1P-6E-WM6"/>
+                    <constraint firstItem="Fdc-SQ-ci5" firstAttribute="leading" secondItem="vvi-h4-7SL" secondAttribute="leading" constant="12" id="d1S-jk-R6m"/>
+                    <constraint firstItem="Fdc-SQ-ci5" firstAttribute="trailing" secondItem="PFV-xE-AGu" secondAttribute="trailing" constant="20" id="jBo-wq-fcF"/>
+                    <constraint firstItem="Fdc-SQ-ci5" firstAttribute="top" secondItem="vvi-h4-7SL" secondAttribute="top" constant="8" id="tsP-SI-mlr"/>
                 </constraints>
             </tableViewCellContentView>
-            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <viewLayoutGuide key="safeArea" id="3SI-pH-JO7"/>
             <connections>
-                <outlet property="contentLbl" destination="6X2-NY-5e4" id="taq-iE-hFa"/>
-                <outlet property="countBorderView" destination="fZe-P2-ZcE" id="bRM-nH-xZh"/>
-                <outlet property="timeLbl" destination="3U9-c6-Tx4" id="a2t-4b-6dI"/>
-                <outlet property="titleLbl" destination="fHU-BA-Ebu" id="Au4-jq-fZn"/>
+                <outlet property="contentLbl" destination="G3Z-m5-tVD" id="xIb-6v-o5Q"/>
+                <outlet property="countBorderView" destination="xeR-RM-FH7" id="XgX-Kn-RVB"/>
+                <outlet property="timeLbl" destination="b26-Ms-uKO" id="NnL-6g-Ret"/>
+                <outlet property="titleLbl" destination="PFV-xE-AGu" id="dXj-6G-ayc"/>
             </connections>
-            <point key="canvasLocation" x="105.79710144927537" y="106.80803571428571"/>
+            <point key="canvasLocation" x="105.79710144927537" y="260.82589285714283"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

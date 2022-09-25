@@ -9,7 +9,15 @@ import UIKit
 
 class GroupZViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet var tableView: UITableView!
+    @IBOutlet var GZ_tableView: UITableView!
+    
+    @IBOutlet weak var GZ_groupZBtn: UIButton!
+    @IBOutlet weak var GZ_groupXBtn: UIButton!
+    
+    @IBOutlet weak var GZ_borderGroupZView: UIView!
+    @IBOutlet weak var GZ_borderGroupXView: UIView!
+
+    @IBOutlet weak var GZ_homeBtn: UITabBarItem!
     
     var titleArr: [String] = ["10분 일찍 와서 준비하라는 과장님",
                               "편의점알바생한테 반말로 답하는 엄마",
@@ -26,16 +34,56 @@ class GroupZViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     let cellReuseIdentifier = "cell"
     let cellSpacingHeight: CGFloat = 0
+     
+    private let GZ_floatingBtn: UIButton = {
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 30))
+        button.backgroundColor = .black
+        let image = UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(pointSize: 30, weight: .medium))
+        button.setImage(image, for: .normal)
+        button.setTitle("글쓰기", for: .normal)
+        button.tintColor = .white
+        button.setTitleColor(.white, for: .normal)
+        button.layer.shadowRadius = 10
+        button.layer.shadowOpacity = 0.3
+        
+        button.layer.cornerRadius = 30
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(GZ_floatingBtn)
+        GZ_floatingBtn.addTarget(self, action: #selector(didTapBtn), for: .touchUpInside)
 
         let nib = UINib(nibName: "CustomGroupZTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "CustomGroupZTableViewCell")
-        tableView.delegate = self
-        tableView.dataSource = self
+        GZ_tableView.register(nib, forCellReuseIdentifier: "CustomGroupZTableViewCell")
+        GZ_tableView.delegate = self
+        GZ_tableView.dataSource = self
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        GZ_floatingBtn.frame = CGRect(x: view.frame.size.width - 130, y: view.frame.size.height - 150, width: 108, height: 41)
+    }
+    
+    @objc private func didTapBtn() {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ZWritePostVC") as? ZWritePostViewController else { return }
+                
+            nextVC.modalTransitionStyle = .coverVertical
+            nextVC.modalPresentationStyle = .overFullScreen
+                
+            self.present(nextVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func GroupXBtnDidTap(_ sender: UIButton) {
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "GroupXVC") as? GroupXViewController else { return }
+                
+            nextVC.modalTransitionStyle = .coverVertical
+            nextVC.modalPresentationStyle = .fullScreen
+                
+            self.present(nextVC, animated: false, completion: nil)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,16 +117,4 @@ class GroupZViewController: UIViewController, UITableViewDelegate, UITableViewDa
             // note that indexPath.section is used rather than indexPath.row
             print("You tapped cell number \(indexPath.section).")
         }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
