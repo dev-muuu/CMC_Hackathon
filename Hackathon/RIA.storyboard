@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -21,18 +21,18 @@
                                 <attributedString key="attributedText">
                                     <fragment content="우리끼리">
                                         <attributes>
-                                            <font key="NSFont" size="30" name="NotoSansKR-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="30"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejq-qP-rDL">
-                                <rect key="frame" x="33" y="407" width="202" height="45"/>
+                                <rect key="frame" x="33" y="398" width="188.5" height="36"/>
                                 <attributedString key="attributedText">
                                     <fragment content="서로에게 물어요">
                                         <attributes>
-                                            <font key="NSFont" size="30" name="NotoSansKR-Bold"/>
+                                            <font key="NSFont" metaFont="system" size="30"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -40,7 +40,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUd-yA-p19">
-                                <rect key="frame" x="30" y="492" width="167" height="182"/>
+                                <rect key="frame" x="30" y="474" width="167" height="182"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GoToAskX_ZBtn"/>
                                 <connections>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ph0-eR-nKl">
-                                <rect key="frame" x="220" y="493.5" width="164" height="179"/>
+                                <rect key="frame" x="220" y="475.5" width="164" height="179"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GoToAskZ_XBtn"/>
                                 <connections>
@@ -56,12 +56,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kH7-g8-AA0">
-                                <rect key="frame" x="220" y="176.5" width="164" height="179"/>
+                                <rect key="frame" x="220" y="167.5" width="164" height="179"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GroupXBtn"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7g-Wo-qct">
-                                <rect key="frame" x="30" y="175" width="164" height="182"/>
+                                <rect key="frame" x="30" y="166" width="164" height="182"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GroupZBtn"/>
                                 <connections>
@@ -127,7 +127,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-w6-TOa">
-                                <rect key="frame" x="0.0" y="138" width="414" height="657"/>
+                                <rect key="frame" x="0.0" y="137" width="414" height="658"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-Kp-ee0">
@@ -144,34 +144,34 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-st-1kV">
-                                <rect key="frame" x="37" y="70" width="340" height="58"/>
+                                <rect key="frame" x="37" y="70" width="340" height="57"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="cal-FG-auA">
-                                        <rect key="frame" x="0.0" y="0.0" width="142" height="58"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="57"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cco-dp-MXC">
-                                                <rect key="frame" x="2" y="0.0" width="138" height="42"/>
+                                                <rect key="frame" x="5" y="0.0" width="132" height="41"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="노란싹수 모임">
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                                                <font key="NSFont" metaFont="system" size="20"/>
                                                             </attributes>
                                                         </fragment>
                                                         <fragment content="💛">
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <font key="NSFont" size="20" name="AppleColorEmoji"/>
-                                                                <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="20"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m31-dP-Eqk">
-                                                <rect key="frame" x="0.0" y="55" width="142" height="3"/>
+                                                <rect key="frame" x="0.0" y="54" width="142" height="3"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="142" id="At4-YC-1mw"/>
@@ -184,17 +184,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="UcW-b3-lJd">
-                                        <rect key="frame" x="198" y="0.0" width="142" height="58"/>
+                                        <rect key="frame" x="198" y="0.0" width="142" height="57"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-9Y-8IS">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="41"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="라떼 모임">
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                                                <font key="NSFont" metaFont="system" size="20"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -202,7 +202,7 @@
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <font key="NSFont" size="20" name="AppleColorEmoji"/>
-                                                                <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="20"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -213,7 +213,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6hI-pc-nrj">
-                                                <rect key="frame" x="0.0" y="55" width="142" height="3"/>
+                                                <rect key="frame" x="0.0" y="54" width="142" height="3"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="142" id="bUW-rF-uel"/>
@@ -354,7 +354,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ilp-V6-aW2">
-                                <rect key="frame" x="0.0" y="138" width="414" height="657"/>
+                                <rect key="frame" x="0.0" y="137" width="414" height="658"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ew0-C1-0ZD">
@@ -371,20 +371,20 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="GQv-ng-Dnj">
-                                <rect key="frame" x="37" y="70" width="340" height="58"/>
+                                <rect key="frame" x="37" y="70" width="340" height="57"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="UIT-U3-Wrq">
-                                        <rect key="frame" x="0.0" y="0.0" width="142" height="58"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="142" height="57"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-f1-7Gw">
-                                                <rect key="frame" x="2" y="0.0" width="138" height="42"/>
+                                                <rect key="frame" x="5" y="0.0" width="132" height="41"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="노란싹수 모임">
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                                                <font key="NSFont" metaFont="system" size="20"/>
                                                             </attributes>
                                                         </fragment>
                                                         <fragment content="💛">
@@ -400,7 +400,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j5t-K9-S6N">
-                                                <rect key="frame" x="0.0" y="55" width="142" height="3"/>
+                                                <rect key="frame" x="0.0" y="54" width="142" height="3"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="Q8p-6S-0lZ"/>
@@ -413,17 +413,17 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="pqe-U5-ot8">
-                                        <rect key="frame" x="198" y="0.0" width="142" height="58"/>
+                                        <rect key="frame" x="198" y="0.0" width="142" height="57"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Iq-oJ-paC">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="41"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="라떼 모임">
                                                             <attributes>
                                                                 <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
+                                                                <font key="NSFont" metaFont="system" size="20"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -438,7 +438,7 @@
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-PH-tyC">
-                                                <rect key="frame" x="0.0" y="55" width="142" height="3"/>
+                                                <rect key="frame" x="0.0" y="54" width="142" height="3"/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="3" id="htr-Dv-Yf1"/>
