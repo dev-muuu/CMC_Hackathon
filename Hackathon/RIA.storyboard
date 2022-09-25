@@ -3,10 +3,16 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="NotoSansKR-Bold.otf">
+            <string>NotoSansKR-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Community Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
@@ -130,19 +136,6 @@
                                 <rect key="frame" x="0.0" y="138" width="414" height="657"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-Kp-ee0">
-                                <rect key="frame" x="0.0" y="795" width="414" height="67"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="67" id="Q5E-26-RCX"/>
-                                </constraints>
-                                <items>
-                                    <tabBarItem image="Home" id="OOw-B5-2J9"/>
-                                    <tabBarItem image="Community" id="r0N-AM-QIA"/>
-                                    <tabBarItem image="Profile" id="gg2-hC-hCA"/>
-                                </items>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </tabBar>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="tAn-st-1kV">
                                 <rect key="frame" x="37" y="70" width="340" height="58"/>
                                 <subviews>
@@ -186,27 +179,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="UcW-b3-lJd">
                                         <rect key="frame" x="198" y="0.0" width="142" height="58"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-9Y-8IS">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDU-9Y-8IS">
                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="라떼 모임">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="☕️">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="AppleColorEmoji"/>
-                                                                <font key="NSOriginalFont" size="20" name="NotoSansKR-Bold"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <state key="normal" title="라떼 모임☕️">
+                                                    <color key="titleColor" name="gray-버튼 비활성화"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="GroupXBtnDidTap:" destination="2J9-MV-lWm" eventType="touchUpInside" id="YCG-yX-F26"/>
@@ -227,18 +205,24 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWB-Xf-TwD">
+                                <rect key="frame" x="0.0" y="810" width="414" height="52"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u18-U4-Obj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="eeS-w6-TOa" firstAttribute="leading" secondItem="u18-U4-Obj" secondAttribute="leading" id="3hV-B9-TyO"/>
-                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="leading" secondItem="u18-U4-Obj" secondAttribute="leading" id="9jK-LX-S1E"/>
-                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="trailing" secondItem="u18-U4-Obj" secondAttribute="trailing" id="AZ3-ga-B7F"/>
+                            <constraint firstItem="GWB-Xf-TwD" firstAttribute="leading" secondItem="u18-U4-Obj" secondAttribute="leading" id="4db-fG-WsC"/>
+                            <constraint firstItem="GWB-Xf-TwD" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="S25-Zi-Xot" secondAttribute="bottom" constant="24" id="8WY-ee-W3c"/>
                             <constraint firstItem="u18-U4-Obj" firstAttribute="trailing" secondItem="eeS-w6-TOa" secondAttribute="trailing" id="KCK-A9-tbK"/>
                             <constraint firstItem="eeS-w6-TOa" firstAttribute="top" secondItem="tAn-st-1kV" secondAttribute="bottom" constant="10" id="PH7-YJ-XXJ"/>
+                            <constraint firstItem="GWB-Xf-TwD" firstAttribute="top" secondItem="S25-Zi-Xot" secondAttribute="top" constant="810" id="Smz-pb-aNZ"/>
+                            <constraint firstItem="GWB-Xf-TwD" firstAttribute="top" secondItem="eeS-w6-TOa" secondAttribute="bottom" constant="15" id="lDT-O4-wJn"/>
                             <constraint firstItem="tAn-st-1kV" firstAttribute="top" secondItem="u18-U4-Obj" secondAttribute="top" constant="26" id="lHs-BK-8tc"/>
-                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="top" secondItem="eeS-w6-TOa" secondAttribute="bottom" id="od6-Lt-evM"/>
-                            <constraint firstItem="g9h-Kp-ee0" firstAttribute="bottom" secondItem="u18-U4-Obj" secondAttribute="bottom" id="pSc-4y-xYo"/>
+                            <constraint firstItem="GWB-Xf-TwD" firstAttribute="bottom" secondItem="u18-U4-Obj" secondAttribute="bottom" id="m8e-3k-tAz"/>
+                            <constraint firstItem="u18-U4-Obj" firstAttribute="trailing" secondItem="GWB-Xf-TwD" secondAttribute="trailing" id="sNu-PM-e42"/>
                             <constraint firstItem="tAn-st-1kV" firstAttribute="centerX" secondItem="S25-Zi-Xot" secondAttribute="centerX" id="v5p-a1-kAg"/>
                         </constraints>
                     </view>
@@ -247,7 +231,6 @@
                         <outlet property="GZ_borderGroupZView" destination="m31-dP-Eqk" id="2rm-J3-qpY"/>
                         <outlet property="GZ_groupXBtn" destination="hDU-9Y-8IS" id="RnX-Q6-tor"/>
                         <outlet property="GZ_groupZBtn" destination="cco-dp-MXC" id="xnj-rz-vc0"/>
-                        <outlet property="GZ_homeBtn" destination="r0N-AM-QIA" id="Ghe-dV-mkJ"/>
                         <outlet property="GZ_tableView" destination="eeS-w6-TOa" id="Qmk-eL-jR2"/>
                     </connections>
                 </viewController>
@@ -292,13 +275,398 @@
                     <view key="view" contentMode="scaleToFill" id="Qds-bw-ufT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00z-Qu-IjG">
+                                <rect key="frame" x="24" y="151.5" width="366" height="37"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="Z4u-dd-j4U"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="엄마를 이해해 줄 수 있을까?">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="20" name="NotoSansKR-Medium"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Xd-dM-RVq">
+                                <rect key="frame" x="24" y="214.5" width="366" height="587.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="안녕">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="노싹들아">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="이런">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="기회를">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="빌려">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="너희에게">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="우리">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="딸에">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="대해">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="물어보려고">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="해">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="우리">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="딸은">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="지금">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" 17">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="살이야">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=". ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="한창">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="이뻐보이고">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="싶을">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="나이라는">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="건">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="이해하지만">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=", ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="요즘들어">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" size="18" name="NotoSansKR-Medium"/>
+                                            <font key="NSOriginalFont" size="18" name="NotoSansKR-Medium"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" ">
+                                        <attributes>
+                                            <color key="NSColor" systemColor="labelColor"/>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dx4-KX-fmj">
+                                <rect key="frame" x="19" y="198.5" width="376" height="1"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="KAq-PT-d0u"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nRQ-CF-Mlh">
+                                <rect key="frame" x="19" y="63" width="39" height="34"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="multiply" catalog="system">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" image="multiply" catalog="system">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6H-dO-F1D">
+                                <rect key="frame" x="363" y="63" width="32" height="34"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="확인">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mL6-Ap-OS6">
+                                <rect key="frame" x="19" y="117" width="376" height="0.5"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="ycb-qY-6h6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7wi-hy-kUM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mL6-Ap-OS6" firstAttribute="leading" secondItem="7wi-hy-kUM" secondAttribute="leading" constant="19" id="8jT-nh-2TJ"/>
+                            <constraint firstItem="7wi-hy-kUM" firstAttribute="trailing" secondItem="00z-Qu-IjG" secondAttribute="trailing" constant="24" id="A03-bb-Lcs"/>
+                            <constraint firstItem="7wi-hy-kUM" firstAttribute="trailing" secondItem="N6H-dO-F1D" secondAttribute="trailing" constant="19" id="HCw-ku-4ah"/>
+                            <constraint firstItem="1Xd-dM-RVq" firstAttribute="leading" secondItem="7wi-hy-kUM" secondAttribute="leading" constant="24" id="NnE-Rf-EWR"/>
+                            <constraint firstItem="nRQ-CF-Mlh" firstAttribute="leading" secondItem="7wi-hy-kUM" secondAttribute="leading" constant="19" id="UY6-CH-0Os"/>
+                            <constraint firstItem="dx4-KX-fmj" firstAttribute="leading" secondItem="7wi-hy-kUM" secondAttribute="leading" constant="19" id="VYv-9T-pht"/>
+                            <constraint firstItem="dx4-KX-fmj" firstAttribute="top" secondItem="00z-Qu-IjG" secondAttribute="bottom" constant="10" id="eKz-kI-W5y"/>
+                            <constraint firstItem="7wi-hy-kUM" firstAttribute="trailing" secondItem="mL6-Ap-OS6" secondAttribute="trailing" constant="19" id="gcE-oO-kCz"/>
+                            <constraint firstItem="mL6-Ap-OS6" firstAttribute="top" secondItem="nRQ-CF-Mlh" secondAttribute="bottom" constant="20" id="loM-Cu-g6A"/>
+                            <constraint firstItem="nRQ-CF-Mlh" firstAttribute="top" secondItem="7wi-hy-kUM" secondAttribute="top" constant="19" id="mh0-Xh-IdQ"/>
+                            <constraint firstItem="00z-Qu-IjG" firstAttribute="top" secondItem="mL6-Ap-OS6" secondAttribute="bottom" constant="34" id="oOr-ci-yt7"/>
+                            <constraint firstItem="N6H-dO-F1D" firstAttribute="top" secondItem="7wi-hy-kUM" secondAttribute="top" constant="19" id="sXz-kk-9rn"/>
+                            <constraint firstItem="7wi-hy-kUM" firstAttribute="trailing" secondItem="dx4-KX-fmj" secondAttribute="trailing" constant="19" id="sco-1A-1sA"/>
+                            <constraint firstItem="N6H-dO-F1D" firstAttribute="centerY" secondItem="nRQ-CF-Mlh" secondAttribute="centerY" id="ulv-Om-6Du"/>
+                            <constraint firstItem="1Xd-dM-RVq" firstAttribute="top" secondItem="dx4-KX-fmj" secondAttribute="bottom" constant="15" id="vuv-x6-dUX"/>
+                            <constraint firstItem="7wi-hy-kUM" firstAttribute="bottom" secondItem="1Xd-dM-RVq" secondAttribute="bottom" constant="60" id="wNQ-xT-BRj"/>
+                            <constraint firstItem="00z-Qu-IjG" firstAttribute="leading" secondItem="7wi-hy-kUM" secondAttribute="leading" constant="24" id="zh6-iH-45w"/>
+                            <constraint firstItem="7wi-hy-kUM" firstAttribute="trailing" secondItem="1Xd-dM-RVq" secondAttribute="trailing" constant="24" id="zsS-he-LDB"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pBO-cT-hqb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2077" y="-783"/>
+            <point key="canvasLocation" x="2015.9420289855075" y="-783.48214285714278"/>
         </scene>
         <!--Write Post View Controller-->
         <scene sceneID="TO2-RW-4sP">
@@ -376,24 +744,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="UIT-U3-Wrq">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="58"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-f1-7Gw">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiC-f1-7Gw">
                                                 <rect key="frame" x="2" y="0.0" width="138" height="42"/>
+                                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="노란싹수 모임">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="NotoSansKR-Bold"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                        <fragment content="💛">
-                                                            <attributes>
-                                                                <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <font key="NSFont" size="20" name="AppleColorEmoji"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <state key="normal" title="노란싹수 모임💛">
+                                                    <color key="titleColor" name="gray-버튼 비활성화"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="GroupZBtnDidTap:" destination="U6E-fR-Mcq" eventType="touchUpInside" id="hwD-5y-Veh"/>
@@ -415,10 +771,11 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="pqe-U5-ot8">
                                         <rect key="frame" x="198" y="0.0" width="142" height="58"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Iq-oJ-paC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Iq-oJ-paC">
                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                                <fontDescription key="fontDescription" name="NotoSansKR-Bold" family="Noto Sans KR" pointSize="20"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal">
+                                                <state key="normal" title="라떼 모임☕️">
                                                     <attributedString key="attributedTitle">
                                                         <fragment content="라떼 모임">
                                                             <attributes>
@@ -435,6 +792,7 @@
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
+                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cwx-PH-tyC">
@@ -489,8 +847,18 @@
         <image name="GroupZBtn" width="140" height="168"/>
         <image name="Home" width="33" height="26"/>
         <image name="Profile" width="27" height="26"/>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <namedColor name="gray-버튼 비활성화">
+            <color red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

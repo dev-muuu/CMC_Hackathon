@@ -13,7 +13,7 @@ class GroupZViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var GZ_groupZBtn: UIButton!
     @IBOutlet weak var GZ_groupXBtn: UIButton!
-    
+
     @IBOutlet weak var GZ_borderGroupZView: UIView!
     @IBOutlet weak var GZ_borderGroupXView: UIView!
 
@@ -68,6 +68,12 @@ class GroupZViewController: UIViewController, UITableViewDelegate, UITableViewDa
         GZ_floatingBtn.frame = CGRect(x: view.frame.size.width - 130, y: view.frame.size.height - 150, width: 108, height: 41)
     }
     
+//    @objc fileprivate func moveToMainViewController(){
+//            print("LoginViewController - moveToMainViewController() called")
+//            let ZWritePostViewController = ZWritePostViewController()
+//            self.navigationController?.pushViewController(ZWritePostViewController, animated: true)
+//        }
+    
     @objc private func didTapBtn() {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ZWritePostVC") as? ZWritePostViewController else { return }
                 
@@ -85,6 +91,7 @@ class GroupZViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 
             self.present(nextVC, animated: false, completion: nil)
     }
+    
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return titleArr.count
