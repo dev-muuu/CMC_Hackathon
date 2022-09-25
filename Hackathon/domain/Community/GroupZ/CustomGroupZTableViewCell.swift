@@ -22,7 +22,7 @@ class CustomGroupZTableViewCell: UITableViewCell {
         super.layoutSubviews()
         
         self.countBorderView?.layer.cornerRadius = 10
-        self.countBorderView?.layer.borderWidth = 1
+        self.countBorderView?.layer.borderWidth = 2
         self.countBorderView?.backgroundColor = .black
     }
 

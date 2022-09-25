@@ -8,6 +8,24 @@
 import UIKit
 
 class CustomGroupXTableViewCell: UITableViewCell {
+    
+    var count: Int = 0
+
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var contentLbl: UILabel!
+    @IBOutlet weak var timeLbl: UILabel!
+    
+    @IBOutlet weak var countBorderView: UIButton!
+    
+    override func layoutSubviews() {
+        
+        super.layoutSubviews()
+        
+        self.countBorderView?.layer.cornerRadius = 10
+        self.countBorderView?.layer.borderWidth = 2
+        self.countBorderView?.backgroundColor = .black
+    }
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
