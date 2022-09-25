@@ -20,7 +20,7 @@ final class CommentTableViewCell: UITableViewCell {
         $0.backgroundColor = .white
     }
     
-    private lazy var userImage: UIImageView = {
+    lazy var userImage: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(named: "ZLogoSmall")
         imageView.layer.cornerRadius = CGFloat(27.5)
@@ -31,7 +31,7 @@ final class CommentTableViewCell: UITableViewCell {
     }()
     
     
-    private lazy var nickname: UILabel = {
+    lazy var nickname: UILabel = {
         let name = UILabel()
         
         name.textColor = .label
@@ -41,7 +41,7 @@ final class CommentTableViewCell: UITableViewCell {
         return name
     }()
     
-    private lazy var comment: UILabel = {
+    lazy var comment: UILabel = {
         let comment = UILabel()
         
         comment.textColor = .label
@@ -52,7 +52,7 @@ final class CommentTableViewCell: UITableViewCell {
         return comment
     }()
     
-    private lazy var time: UILabel = {
+    lazy var time: UILabel = {
         let time = UILabel()
         
         time.textColor = .tertiaryLabel

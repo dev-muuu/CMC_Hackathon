@@ -32,7 +32,14 @@ struct UserVoteResult: Decodable{
 
 struct CommentResult: Decodable{
     let content: String
-    let createdDateTime: String
+    let createdDate: String
     let nickname: String
     let userGeneration: String
+}
+
+struct VoteCommentModel: Decodable{
+    let code: Int
+    let isSuccess: Bool
+    let message: String
+    let result: CommentResult?
 }

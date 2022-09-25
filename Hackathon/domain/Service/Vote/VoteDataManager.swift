@@ -34,13 +34,13 @@ class VoteDataManager{
         }
     }
     
-    func votePost(viewController: VoteViewController, _ parameter: VoteInput, voteId: String){
+    func votePost(viewController: VoteViewController, _ parameter: VoteInput, voteId: Int){
         
         AF.request("https://dongmoo.shop/api/v1/vote/\(voteId)/check", method: .post, parameters: parameter, encoder: JSONParameterEncoder.default, headers: headers, interceptor: Interceptor()).validate().responseDecodable(of: VoteModel.self) { response in
             switch response.result {
             case .success(let result):
                 switch result.code{
-                case 1000:
+                case 200:
                     viewController.successApiVotePost(result: result.result)
                 default:
                     return

@@ -9,5 +9,5 @@ import Foundation
 
 struct CommentInput: Encodable{
     var content: String
-    var userID: Int
+    var userId: Int
 }

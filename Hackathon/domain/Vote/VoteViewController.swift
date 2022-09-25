@@ -11,7 +11,7 @@ class VoteViewController: UIViewController {
     
     let mainView = VoteView()
     
-    var chatData: [String] = ["1","2","3","4","5"] //default = []
+//    var chatData: [String] = []
     
     var currentTitle: IndexPath = [0,0]{
         didSet{
@@ -21,6 +21,7 @@ class VoteViewController: UIViewController {
     
     var voteInfo: UserVoteResult!{
         didSet{
+            print("받아옴?",voteInfo)
             mainView.tableView.reloadData()
         }
     }
@@ -59,9 +60,9 @@ class VoteViewController: UIViewController {
         voteInfo = result
     }
     
-    func successApiPostComment(){
+    func successApiPostComment(commentData: CommentResult){
         mainView.chatTextfield.text = ""
-//        voteInfo.comments.app
+        voteInfo.comments.append(commentData)
     }
 
 }
@@ -73,7 +74,7 @@ extension VoteViewController: UITextFieldDelegate{
         if(textField.text == ""){
             return false
         }
-        let parameter = CommentInput(content: textField.text!, userID: Const.userId)
+        let parameter = CommentInput(content: textField.text!, userId: Const.userId)
         CommentDataManager().commentPost(viewController: self, parameter, voteId: voteInfo.voteId)
         return true
     }
@@ -132,8 +133,7 @@ extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
         if(voteInfo == nil){
             return 0
         }
-        return voteInfo.selectTopic == 0 ? 1 : chatData.count + 1
-//        return chatData.count + 1
+        return voteInfo.selectTopic == 0 ? 1 : voteInfo.comments.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -154,6 +154,10 @@ extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
             return cell
         }else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.cellIdentifier, for: indexPath) as? CommentTableViewCell else { fatalError() }
+            let data = voteInfo.comments[indexPath.row - 1]
+            cell.comment.text = data.content
+            cell.nickname.text = data.nickname
+            cell.time.text = data.createdDate
             return cell
         }
     }

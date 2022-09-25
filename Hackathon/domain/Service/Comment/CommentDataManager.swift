@@ -13,13 +13,13 @@ class CommentDataManager{
     let headers : HTTPHeaders = [.authorization(Const.accessToken)]
     
     func commentPost(viewController: VoteViewController, _ parameter: CommentInput, voteId: Int){
-        
-        AF.request("https://dongmoo.shop/api/v1/vote/\(voteId)/check", method: .post, parameters: parameter, encoder: JSONParameterEncoder.default, headers: headers, interceptor: Interceptor()).validate().responseDecodable(of: ApiModel.self) { response in
+        print("파라미터 점검", parameter)
+        AF.request("https://dongmoo.shop/api/v1/vote/\(voteId)/comment", method: .post, parameters: parameter, encoder: JSONParameterEncoder.default, headers: headers, interceptor: Interceptor()).validate().responseDecodable(of: VoteCommentModel.self) { response in
             switch response.result {
             case .success(let result):
                 switch result.code{
-                case 1000:
-                    viewController.successApiPostComment()
+                case 200:
+                    viewController.successApiPostComment(commentData: result.result!)
                 default:
                     return
                 }

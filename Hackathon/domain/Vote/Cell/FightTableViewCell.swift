@@ -36,28 +36,15 @@ class FightTableViewCell: UITableViewCell{
     var voteData: UserVoteResult! {
         didSet{
             self.topChoiceBtn.setTitle(voteData.topic1, for: .normal)
-            self.topChoiceBtn.setTitle(voteData.topic2, for: .normal)
+            self.bottomChoiceBtn.setTitle(voteData.topic2, for: .normal)
+            self.chatCountLabel.text = "댓글 \(voteData.comments.count)개"
         }
     }
     
     var type: FightType!{
         didSet{
-            print("type setting?")
-            print(type)
             self.topChoiceBtn.backgroundColor = type.lightColor
             self.bottomChoiceBtn.backgroundColor = type.deepColor
-        }
-    }
-    
-    var didVote = false{
-        didSet{
-            superViewController.mainView.tableView.reloadData()
-        }
-    }
-    
-    var chatCount: Int = 0{
-        didSet{
-            chatCountLabel.text = "댓글 \(self.chatCount)개"
         }
     }
     
@@ -89,7 +76,6 @@ class FightTableViewCell: UITableViewCell{
         $0.titleLabel?.numberOfLines = 0
         $0.titleLabel?.font = UIFont.notosans(size: 20, family: .Bold)
         $0.titleLabel?.textAlignment = .center
-        $0.setTitle("편의점 알바생에게 반말하는 우리 엄마", for: .normal)
         $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         
         $0.addTarget(self, action: #selector(choiceBtnDidClicked), for: .touchUpInside)
@@ -101,7 +87,6 @@ class FightTableViewCell: UITableViewCell{
         $0.titleLabel?.numberOfLines = 0
         $0.titleLabel?.font = UIFont.notosans(size: 20, family: .Bold)
         $0.titleLabel?.textAlignment = .center
-        $0.setTitle("편의점 알바생에게 반말하는 우리 엄마", for: .normal)
         $0.titleEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         
         $0.addTarget(self, action: #selector(choiceBtnDidClicked), for: .touchUpInside)
@@ -125,6 +110,8 @@ class FightTableViewCell: UITableViewCell{
         $0.backgroundColor = UIColor(red: 243/255, green: 243/255, blue: 243/255, alpha: 1)
     }
     
+    var percentageView: PercentageView!
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
@@ -138,6 +125,14 @@ class FightTableViewCell: UITableViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        versusLabel.removeFromSuperview()
+        percentageView?.removeFromSuperview()
+        choiceTag.removeFromSuperview()
+        
+    }
     func setUpView(){
         
         self.selectedBackgroundView = UIView()
@@ -213,7 +208,7 @@ class FightTableViewCell: UITableViewCell{
         //TODO: - MyPick label 추가
         versusLabel.removeFromSuperview()
     
-        let percentageView = PercentageView(type: self.type, top: CGFloat(self.voteData.percent1), bottom: CGFloat(self.voteData.percent2))
+        percentageView = PercentageView(type: self.type, top: CGFloat(self.voteData.percent1), bottom: CGFloat(self.voteData.percent2))
         versusFrame.addSubview(percentageView)
         
         percentageView.snp.makeConstraints{
@@ -223,14 +218,15 @@ class FightTableViewCell: UITableViewCell{
             $0.leading.equalToSuperview().offset(31.37)
             $0.trailing.equalToSuperview().offset(-30.81)
         }
-    
-    }
-    
-    @objc func choiceBtnDidClicked(_ sender: UIButton){
         
-        self.didVote = true
+        //TAG 추가
         
-        sender.addSubview(choiceTag)
+        
+        if(voteData.selectTopic == 1){
+            topChoiceBtn.addSubview(choiceTag)
+        }else{
+            bottomChoiceBtn.addSubview(choiceTag)
+        }
         
         choiceTag.snp.makeConstraints{
             $0.bottom.equalToSuperview().offset(-6)
@@ -238,6 +234,19 @@ class FightTableViewCell: UITableViewCell{
             $0.width.equalTo(75)
             $0.height.equalTo(32)
         }
+    
+    }
+    
+    @objc func choiceBtnDidClicked(_ sender: UIButton){
+        
+        if(voteData.selectTopic != 0){
+            return
+        }
+        
+        let topic = sender == topChoiceBtn ? 1 : 2
+        let parameter = VoteInput(checkTopic: topic, userId: Const.userId)
+        
+        VoteDataManager().votePost(viewController: superViewController, parameter, voteId: voteData.voteId)
         
     }
 }
@@ -270,21 +279,20 @@ extension FightTableViewCell{
             
             super.init(frame: .zero)
             
-            self.highPercentage = top
-            
             if(top > bottom){
-                highPercentageView.backgroundColor = type.deepColor
-                lowPercentageView.backgroundColor = type.lightColor
-                
+                highPercentageView.backgroundColor = type.lightColor
+                lowPercentageView.backgroundColor = type.deepColor
+                self.highPercentage = top
                 highPercentageView.text = "\(Int(top))%"
                 lowPercentageLabel.text = "\(Int(bottom))%"
             }else{
-                highPercentageView.backgroundColor = type.lightColor
-                lowPercentageView.backgroundColor = type.deepColor
-                
+                highPercentageView.backgroundColor = type.deepColor
+                lowPercentageView.backgroundColor = type.lightColor
+                self.highPercentage = bottom
                 highPercentageView.text = "\(Int(bottom))%"
                 lowPercentageLabel.text = "\(Int(top))%"
             }
+        
             
 //            highPercentageView.backgroundColor = type.deepColor
 //            lowPercentageView.backgroundColor = type.lightColor
@@ -322,11 +330,16 @@ extension FightTableViewCell{
         
         func setPercentageWidth(){
             
-            let highWidth = (Const.DEVICE_WIDTH - 68) * self.highPercentage / 100
-            
-            
-            highPercentageView.snp.makeConstraints{
-                $0.width.equalTo(highWidth)
+            if(self.highPercentage == 100){
+                highPercentageView.snp.makeConstraints{
+                    $0.trailing.equalToSuperview()
+                }
+            }else{
+                let highWidth = (Const.DEVICE_WIDTH - 68) * self.highPercentage / 100
+                
+                highPercentageView.snp.makeConstraints{
+                    $0.width.equalTo(highWidth)
+                }
             }
             
         }
