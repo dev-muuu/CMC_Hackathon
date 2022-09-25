@@ -292,13 +292,6 @@ extension FightTableViewCell{
                 highPercentageView.text = "\(Int(bottom))%"
                 lowPercentageLabel.text = "\(Int(top))%"
             }
-        
-            
-//            highPercentageView.backgroundColor = type.deepColor
-//            lowPercentageView.backgroundColor = type.lightColor
-//
-//            highPercentageView.text = "\(Int(top))%"
-//            lowPercentageLabel.text = "\(Int(bottom))%"
     
             self.layer.cornerRadius = 16
             

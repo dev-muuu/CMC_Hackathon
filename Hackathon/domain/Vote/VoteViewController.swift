@@ -158,6 +158,7 @@ extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
             cell.comment.text = data.content
             cell.nickname.text = data.nickname
             cell.time.text = data.createdDate
+            cell.userImage.image = data.userGeneration == "Z" ? UIImage(named: "ZLogoSmall") : UIImage(named: "XLogoSmall")
             return cell
         }
     }
