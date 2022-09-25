@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		072C533B28DF41E200FB2049 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */; };
 		072C533C28DF41E200FB2049 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */; };
-		0737F0D828DFB11700A47D72 /* WritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0737F0D728DFB11700A47D72 /* WritePostViewController.swift */; };
 		074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FFC7828DF47060050D332 /* DetailPostView.swift */; };
 		074FFC7B28DF4DC10050D332 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */; };
 		0765138B28DF2BD900BCB0BD /* DetailPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */; };
@@ -79,7 +78,6 @@
 /* Begin PBXFileReference section */
 		072C533928DF41E200FB2049 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
 		072C533A28DF41E200FB2049 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
-		0737F0D728DFB11700A47D72 /* WritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePostViewController.swift; sourceTree = "<group>"; };
 		074FFC7828DF47060050D332 /* DetailPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostView.swift; sourceTree = "<group>"; };
 		074FFC7A28DF4DC10050D332 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		0765138A28DF2BD900BCB0BD /* DetailPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPostTableViewCell.swift; sourceTree = "<group>"; };
@@ -170,14 +168,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0737F0D628DFB09D00A47D72 /* Write */ = {
-			isa = PBXGroup;
-			children = (
-				0737F0D728DFB11700A47D72 /* WritePostViewController.swift */,
-			);
-			path = Write;
-			sourceTree = "<group>";
-		};
 		074FFC7728DF46EB0050D332 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +377,6 @@
 		8AD1BAC128DF64CC00260E5E /* Community */ = {
 			isa = PBXGroup;
 			children = (
-				0737F0D628DFB09D00A47D72 /* Write */,
 				8AD1BAD828DF663F00260E5E /* GroupX */,
 				8AD1BACC28DF659D00260E5E /* GroupZ */,
 				8AD1BAC628DF652900260E5E /* Ask */,
@@ -709,7 +698,6 @@
 				8AD1BAD528DF662C00260E5E /* GroupZViewController.swift in Sources */,
 				0765138F28DF2BF300BCB0BD /* DetailPostViewController.swift in Sources */,
 				8AD1BAC328DF64FE00260E5E /* ToXViewController.swift in Sources */,
-				0737F0D828DFB11700A47D72 /* WritePostViewController.swift in Sources */,
 				57E75E9928DF54EA00AC24B2 /* FightTableViewCell.swift in Sources */,
 				57E75EA828DFA8E000AC24B2 /* CommentInput.swift in Sources */,
 				57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */,
