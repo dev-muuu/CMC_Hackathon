@@ -44,6 +44,7 @@
 		57E75EA128DFA8B100AC24B2 /* VoteInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA028DFA8B100AC24B2 /* VoteInput.swift */; };
 		57E75EA328DFA8BA00AC24B2 /* VoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA228DFA8BA00AC24B2 /* VoteModel.swift */; };
 		57E75EA828DFA8E000AC24B2 /* CommentInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57E75EA728DFA8E000AC24B2 /* CommentInput.swift */; };
+
 		8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16E77928DF6BBB0011FD66 /* CommunityMainViewController.swift */; };
 		8A16E78128DF84C20011FD66 /* CustomGroupXTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16E77F28DF84C10011FD66 /* CustomGroupXTableViewCell.swift */; };
 		8A16E78228DF84C20011FD66 /* CustomGroupXTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A16E78028DF84C10011FD66 /* CustomGroupXTableViewCell.xib */; };
@@ -715,11 +716,13 @@
 				57E75E9B28DF551200AC24B2 /* ChatTitleViewCell.swift in Sources */,
 				57E75E3E28DEE1F100AC24B2 /* ViewController.swift in Sources */,
 				8AD1BACA28DF658B00260E5E /* ZAskViewController.swift in Sources */,
+				57E75EAC28DFC4FE00AC24B2 /* VoteDataManager.swift in Sources */,
 				57E75E3A28DEE1F100AC24B2 /* AppDelegate.swift in Sources */,
 				57E75E3C28DEE1F100AC24B2 /* SceneDelegate.swift in Sources */,
 				8AD1BAC528DF651E00260E5E /* ToZViewController.swift in Sources */,
 				8AD1BAD128DF660F00260E5E /* GroupXViewController.swift in Sources */,
 				473A917928DF2F260050D389 /* loginDetail.swift in Sources */,
+				57E75EAB28DFC4F800AC24B2 /* CommentDataManager.swift in Sources */,
 				8A16E78528DF85080011FD66 /* CustomGroupZTableViewCell.swift in Sources */,
 				8AD1BAC828DF657B00260E5E /* XAskViewController.swift in Sources */,
 				074FFC7928DF47060050D332 /* DetailPostView.swift in Sources */,
@@ -734,6 +737,7 @@
 				57E75E7D28DEF21400AC24B2 /* VoteView.swift in Sources */,
 				57E75E7F28DEF22000AC24B2 /* VoteTitleCollectionViewCell.swift in Sources */,
 				8A16E78128DF84C20011FD66 /* CustomGroupXTableViewCell.swift in Sources */,
+				57E75EAD28DFC50300AC24B2 /* CommentModel.swift in Sources */,
 				8AD1BAD728DF663900260E5E /* ZWritePostViewController.swift in Sources */,
 				8A16E77A28DF6BBB0011FD66 /* CommunityMainViewController.swift in Sources */,
 			);

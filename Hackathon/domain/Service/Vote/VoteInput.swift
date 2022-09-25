@@ -6,3 +6,8 @@
 //
 
 import Foundation
+
+struct VoteInput: Encodable{
+    var checkTopic: Int
+    var userId: Int
+}
