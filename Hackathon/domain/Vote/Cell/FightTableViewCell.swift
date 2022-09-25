@@ -10,6 +10,10 @@ import UIKit
 class Const{
     static let DEVICE_WIDTH = UIScreen.main.bounds.size.width
     static let DEVICE_HEIGTH = UIScreen.main.bounds.size.height
+    
+    static let accessToken = "VdcqhPDSLt7NbX7I_DxCJaAWcWE-cs7H9MdiYUe0Cj11GgAAAYNx6fTX"
+    
+    static let userId = 7
 }
 
 extension UIColor{
@@ -28,6 +32,13 @@ class FightTableViewCell: UITableViewCell{
     static let cellIdentifier = "FightTableViewCell"
     
     var superViewController: VoteViewController!
+    
+    var voteData: UserVoteResult! {
+        didSet{
+            self.topChoiceBtn.setTitle(voteData.topic1, for: .normal)
+            self.topChoiceBtn.setTitle(voteData.topic2, for: .normal)
+        }
+    }
     
     var type: FightType!{
         didSet{
@@ -202,7 +213,7 @@ class FightTableViewCell: UITableViewCell{
         //TODO: - MyPick label 추가
         versusLabel.removeFromSuperview()
     
-        let percentageView = PercentageView(type: self.type, high: 88, low: 12)
+        let percentageView = PercentageView(type: self.type, top: CGFloat(self.voteData.percent1), bottom: CGFloat(self.voteData.percent2))
         versusFrame.addSubview(percentageView)
         
         percentageView.snp.makeConstraints{
@@ -216,6 +227,7 @@ class FightTableViewCell: UITableViewCell{
     }
     
     @objc func choiceBtnDidClicked(_ sender: UIButton){
+        
         self.didVote = true
         
         sender.addSubview(choiceTag)
@@ -226,6 +238,7 @@ class FightTableViewCell: UITableViewCell{
             $0.width.equalTo(75)
             $0.height.equalTo(32)
         }
+        
     }
 }
 
@@ -253,17 +266,31 @@ extension FightTableViewCell{
             $0.clipsToBounds = true
         }
         
-        init(type: FightType,high: CGFloat, low: CGFloat){
+        init(type: FightType, top: CGFloat, bottom: CGFloat){
             
             super.init(frame: .zero)
             
-            self.highPercentage = high
+            self.highPercentage = top
             
-            highPercentageView.backgroundColor = type.deepColor
-            lowPercentageView.backgroundColor = type.lightColor
+            if(top > bottom){
+                highPercentageView.backgroundColor = type.deepColor
+                lowPercentageView.backgroundColor = type.lightColor
+                
+                highPercentageView.text = "\(Int(top))%"
+                lowPercentageLabel.text = "\(Int(bottom))%"
+            }else{
+                highPercentageView.backgroundColor = type.lightColor
+                lowPercentageView.backgroundColor = type.deepColor
+                
+                highPercentageView.text = "\(Int(bottom))%"
+                lowPercentageLabel.text = "\(Int(top))%"
+            }
             
-            highPercentageView.text = "\(Int(high))%"
-            lowPercentageLabel.text = "\(Int(low))%"
+//            highPercentageView.backgroundColor = type.deepColor
+//            lowPercentageView.backgroundColor = type.lightColor
+//
+//            highPercentageView.text = "\(Int(top))%"
+//            lowPercentageLabel.text = "\(Int(bottom))%"
     
             self.layer.cornerRadius = 16
             

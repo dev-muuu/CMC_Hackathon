@@ -15,6 +15,12 @@ class VoteViewController: UIViewController {
     
     var currentTitle: IndexPath = [0,0]{
         didSet{
+            VoteDataManager().getUserVote(viewController : self, userId: Const.userId, type: currentTitle)
+        }
+    }
+    
+    var voteInfo: UserVoteResult!{
+        didSet{
             mainView.tableView.reloadData()
         }
     }
@@ -22,7 +28,6 @@ class VoteViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
         self.view.addSubview(mainView)
         
         mainView.titleCollectionView.dataSource = self
@@ -40,6 +45,23 @@ class VoteViewController: UIViewController {
             $0.top.equalToSuperview().offset(50)
             $0.bottom.leading.trailing.equalToSuperview()
         }
+        
+        VoteDataManager().getUserVote(viewController : self, userId: Const.userId, type: currentTitle)
+    }
+    
+    //MARK: - API
+    
+    func successApiGet(result: UserVoteResult){
+        voteInfo = result
+    }
+    
+    func successApiVotePost(result: UserVoteResult){
+        voteInfo = result
+    }
+    
+    func successApiPostComment(){
+        mainView.chatTextfield.text = ""
+//        voteInfo.comments.app
     }
 
 }
@@ -47,8 +69,12 @@ class VoteViewController: UIViewController {
 extension VoteViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
-        print(textField.text)
-        textField.text = nil
+        
+        if(textField.text == ""){
+            return false
+        }
+        let parameter = CommentInput(content: textField.text!, userID: Const.userId)
+        CommentDataManager().commentPost(viewController: self, parameter, voteId: voteInfo.voteId)
         return true
     }
     
@@ -103,7 +129,11 @@ extension VoteViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return chatData.count + 1
+        if(voteInfo == nil){
+            return 0
+        }
+        return voteInfo.selectTopic == 0 ? 1 : chatData.count + 1
+//        return chatData.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -113,8 +143,14 @@ extension VoteViewController: UITableViewDelegate, UITableViewDataSource{
             cell.superViewController = self
             cell.titleLabel.text = currentTitle == [0,0] ? "누가 더 싹수가 노란가" : "누가 더 라떼인가"
             cell.type = currentTitle == [0,0] ? Zgeneration() : Xgeneration()
+            cell.voteData = voteInfo
             
-            cell.didVote ? cell.willShowPercentageView() : cell.willShowVersusView()
+            switch cell.voteData.selectTopic{
+            case 0:
+                cell.willShowVersusView()
+            default:
+                cell.willShowPercentageView()
+            }
             return cell
         }else{
             guard let cell = tableView.dequeueReusableCell(withIdentifier: CommentTableViewCell.cellIdentifier, for: indexPath) as? CommentTableViewCell else { fatalError() }

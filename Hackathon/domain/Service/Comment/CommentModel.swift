@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct ApiModel: Decodable{
+    
+    var code: Int
+    var isSuccess: Bool
+    var message: String
+}
