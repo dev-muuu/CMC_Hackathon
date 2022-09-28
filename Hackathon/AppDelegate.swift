@@ -10,7 +10,7 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
 
-@main
+ @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
